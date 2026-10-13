@@ -1,0 +1,28 @@
+question,gold,pred,answered,correct,task_family,error
+Which cell line has the lowest spiking ratio of single tumor cells isolated?,CHLA90,CHLA90,1,1,Lookup,
+What is the Net Charge at pH 7 of Tk-AMP-D6?,+2,+2,1,1,Lookup,
+What is the value of α1 for the gene TGIF?,0.70,0.70,1,1,Lookup,
+What is the total number of variables included in invasive measurements?,15,0,1,0,Compute,
+How many individuals with a Hoehn-Yahr stage of 2 have a family history of PD?,8,INSUFFICIENT,1,0,Compute,
+Which gene has the highest percentage of 'High' in the Unknown_1 column?,"GPX2, GPX4, GPX6, GPX7, PRDX5, and SRXN1","The gene with the highest percentage of 'High' in the Unknown_1 column is NOS2, with a percentage of 79%.",1,0,Lookup,
+"What is the total number of experiments conducted for cell lines SW480, H292, and MCF-7 with Tumor antigen EGFR, EpCAM, and HER2 respectively?",3 experiments,111,1,0,Compute,
+What is the coefficient value for βPLAND in the time period 2002-2006?,-0.045,-.045,1,0,Lookup,
+"What is the combined ToxB sensitivity for varieties Avalon Cadenza4, Avalon Cadenza NILs5, and TILLING7?",0.2,0.0,1,0,Compute,
+What is the difference in fontanelle size between the baby at 4 months 9 days and 5 months 15 days in table-1?,1 x 0.5 cm,1.0 cm,1,1,Compute,
+What is the sum of the FC magnitude for the top 3 genes with the lowest p-values?,The sum of the FC magnitudes for the top 3 genes with the lowest p-values is 7.61,6.6,1,0,Compute,
+Which group has the highest average marker distance in the one-step process?,G1,G1,1,1,Compute,
+What percentage of participants in the Smoking group used to smoke?,8 (42.11),26.51%,1,0,Lookup,
+What is the average Z-value for all coefficients in the table?,(-2.634 - 1.125 - 0.734 - 2.595 - 1.266 + 2.806 + 2.132 + 0.792 + 2.249 + 1.789 + 0.539 - 1.185 - 0.883 - 0.776 - 1.354) / 15 = -0.150,-0.15,1,0,Compute,
+What is the difference in schooling duration between the youngest and oldest individuals in months?,72 months,146 months,1,0,Compute,
+What is the total duration of schooling in years and months?,13 years,The total duration of schooling is 502 months.,1,0,Compute,
+What is the BIC value for Model 5 (Comm.P_1 Factor Comm.P_2 Factor)?,-405704.02,,0,0,Lookup,Max turns (20) exceeded
+What is the average value in the 'HE' column?,0.512,0.5692,1,0,Compute,
+What is the difference between the coefficients for βEG in the time periods 2006-2010 and 2002-2010?,0.188 - (-0.112) = 0.3,-0.073,1,0,Compute,
+What is the Accession Number of OsDEF7?,BAF09407.1,BAF09407.1,1,1,Lookup,
+What is the -2LL value for Model 1 (Cholesky ACE)?,140275.80,,0,0,Lookup,Max turns (20) exceeded
+What is the role of Wisp2 in tertiary lymphoid organs?,Wisp2 is part of the Wnt signaling pathway and linked to aging-related inflammation.,Wisp2 is part of the Wnt signaling,1,1,Lookup,
+"What is the total sum of N, HE, and FIS for rows 3, 7, and 11?","N: 24, HE: 1.678, FIS: 0.01",113.678,1,0,Compute,
+What percentage of patients in Other Studies aged 30-50 have exercise intolerance?,89%,87.95%,1,0,Compute,
+What is the average age of patients with DM in the table?,Average age of patients with DM is 64,60.45,1,0,Compute,
+What is the average age of Hispanic Enriched AD Cases in the Discovery Sample table?,75.4,,0,0,Lookup,Max turns (20) exceeded
+What is the total number of mutations for p.Leu1733Pro and p.Arg1597Trp?,20,10.,1,0,Compute,

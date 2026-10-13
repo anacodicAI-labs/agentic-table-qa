@@ -62,3 +62,23 @@ COST (model calls priced at gpt-4o-mini rates)
   Biology cot       $0.4598 total, 1380 calls, $0.00033/question
   denominator is dollars per QUESTION; see docs/09 for why cross-paper
   dollar figures are not comparable
+
+SCOREABLE SUBSET -- Biology (baseline/cot full domain + agent sample)
+  excluded as unscoreable: 179/1070 (16.7%) -- meta-label or free-text gold
+  config      acc FULL  acc SCOREABLE   delta
+  agent          38.7%          43.8%   +5.1
+  baseline       56.1%          62.9%   +6.8
+  cot            60.4%          69.4%   +8.9
+
+SCOREABLE SUBSET -- CompSci
+  excluded as unscoreable: 465/1824 (25.5%) -- meta-label or free-text gold
+  config      acc FULL  acc SCOREABLE   delta
+  agent          42.9%          51.9%   +8.9
+  baseline       51.6%          62.7%  +11.0
+  cot            56.9%          70.4%  +13.5
+
+TURN-BUDGET SENSITIVITY
+  27 Biology items produced no answer at the 8-turn cap.
+  Re-run at cap 20: 24 terminated (88.9%), 3 still did not,
+  and 7 were correct (25.9% of the failed set).
+  The extra turn budget therefore buys termination, not accuracy.

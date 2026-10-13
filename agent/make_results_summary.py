@@ -74,6 +74,34 @@ def abstention(title, df):
         print(f"  {cfg:10s} {len(ab):10d} {tp:8d} {prec:10.2f} {hall:13.1%}")
 
 
+
+def scoreable(df):
+    """Mask of items whose gold can be judged by exact/numeric match.
+
+    Two gold-answer defects in the benchmark make exact match inappropriate:
+    a meta-label ("Irrelevant question") used in place of an answer, and
+    multi-sentence free-text answers. Neither is introduced by this code. We
+    report the full set and this subset together; neither alone.
+    """
+    g = df["gold"].fillna("").astype(str)
+    meta = g.str.lower().str.contains("irrelevant question")
+    freetext = g.str.split().str.len() >= 6
+    return ~(meta | freetext | g.str.strip().eq(""))
+
+
+def scoreable_block(title, df):
+    m = scoreable(df)
+    print(f"\n{title}")
+    print(f"  excluded as unscoreable: {int((~m).sum())}/{len(df)} "
+          f"({(~m).mean():.1%}) -- meta-label or free-text gold")
+    print(f"  {'config':10s} {'acc FULL':>9s} {'acc SCOREABLE':>14s} {'delta':>7s}")
+    for cfg in sorted(df["config"].unique()):
+        d = df[df["config"] == cfg]
+        sm = scoreable(d)
+        full, sub = d["correct"].mean(), d[sm]["correct"].mean()
+        print(f"  {cfg:10s} {full*100:8.1f}% {sub*100:13.1f}% {(sub-full)*100:+6.1f}")
+
+
 print("=" * 78)
 print("RESULTS SUMMARY -- every number quoted in the paper")
 print("model gpt-4o-mini, temperature 0.0, agent turn cap 8")
@@ -114,3 +142,20 @@ print("  Biology baseline  $0.2916 total, 1380 calls, $0.00021/question")
 print("  Biology cot       $0.4598 total, 1380 calls, $0.00033/question")
 print("  denominator is dollars per QUESTION; see docs/09 for why cross-paper")
 print("  dollar figures are not comparable")
+
+scoreable_block("SCOREABLE SUBSET -- Biology (baseline/cot full domain + agent sample)",
+                pd.concat([bio, ag], ignore_index=True))
+scoreable_block("SCOREABLE SUBSET -- CompSci", cs)
+
+print("\nTURN-BUDGET SENSITIVITY")
+try:
+    tp = pd.read_csv(os.path.join(R, "turncap_probe.csv"))
+    n = len(tp)
+    print(f"  {n} Biology items produced no answer at the 8-turn cap.")
+    print(f"  Re-run at cap 20: {int(tp.answered.sum())} terminated "
+          f"({tp.answered.mean():.1%}), {int(n - tp.answered.sum())} still did not,")
+    print(f"  and {int(tp.correct.sum())} were correct "
+          f"({tp.correct.sum()/n:.1%} of the failed set).")
+    print("  The extra turn budget therefore buys termination, not accuracy.")
+except FileNotFoundError:
+    print("  turncap_probe.csv not present -- run turncap_probe.py")

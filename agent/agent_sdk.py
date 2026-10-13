@@ -135,6 +135,12 @@ _AGENTS = {}
 _LOOP = None
 
 
+# Turn cap for one agent run. Exposed so the cap can be varied: the rate at which
+# the agent exhausts it is a reported result, and that result is only meaningful if
+# the cap itself can be moved and the effect measured.
+MAX_TURNS = int(os.environ.get("MAX_TURNS", "8"))
+
+
 def _run(coro):
     """Run a coroutine from either a script or a Jupyter kernel.
 
@@ -228,7 +234,7 @@ def run_agent(question: str, table_csv: str, table_aware: bool = False,
     last_err = None
     for attempt in range(3):
         try:
-            result = _run(Runner.run(agent_obj, prompt, max_turns=8))
+            result = _run(Runner.run(agent_obj, prompt, max_turns=MAX_TURNS))
             last_err = None
             break
         except Exception as e:                  # noqa: BLE001
