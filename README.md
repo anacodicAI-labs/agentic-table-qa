@@ -53,26 +53,72 @@ evaluation makes no network calls beyond the model API.
 
 ## Reproducing the paper's numbers
 
+These are the exact commands behind the committed CSVs in `results/`. All runs use
+`gpt-4o-mini` at temperature 0.0, with the agent's turn cap at 8.
+
 ```bash
 cd agent
 
-# main arm: biomedical case study
-BUDGET_USD=3.00 python run_eval.py --domain Biology \
-    --configs baseline,cot,agent --repeats 3 --out-dir results/biology
+# Biology, baseline and cot, full domain, three repeats
+BUDGET_USD=1.20 python run_eval.py --domain Biology \
+    --configs baseline,cot --repeats 3 --limit 460 \
+    --out-dir results_v2/bio_fast
 
-# transfer arm: a second domain
+# Biology, agent, seeded 150-question sample, three repeats
+BUDGET_USD=1.50 python run_eval.py --domain Biology \
+    --configs agent --repeats 3 --limit 150 --sample-seed 7 \
+    --out-dir results_v2/bio_agent
+
+# CompSci transfer arm, full domain, single run
 BUDGET_USD=1.50 python run_eval.py --domain CompSci \
-    --configs baseline,cot,agent --repeats 1 --out-dir results/compsci
+    --configs baseline,cot,agent --repeats 1 --limit 608 \
+    --out-dir results_v2/compsci
 ```
 
-Every run is executed under an enforced spend ceiling (`BUDGET_USD`); the run stops
-and writes partial results rather than exceeding it.
+The agent config is run separately because it is multi-turn and far slower than the
+plain calls; keeping it in its own process stops it blocking the other repeats.
 
-Then:
+Then regenerate the summary that the paper cites:
 
 ```bash
+python make_results_summary.py        # -> results/RESULTS_SUMMARY.txt
 cd ../eval && python analyze_results.py
 ```
+
+`results/RESULTS_SUMMARY.txt` is the single source of truth: no number appears in the
+paper that this script does not produce.
+
+## Results
+
+Accuracy on answered items, by task family. Biology figures are the mean of three
+runs; CompSci is a single run.
+
+| Domain | Config | Overall | Lookup | Compute | No answer |
+|---|---|---|---|---|---|
+| Biology | baseline | 55.9 ± 0.7 | 77.6 | 40.2 | 0 |
+| Biology | cot | **60.9 ± 0.7** | 76.5 | **48.5** | 0 |
+| Biology | agent | 40.2 ± 1.4 | 58.2 | 38.2 | 27 / 150 (18.0%) |
+| CompSci | baseline | 51.6 | 66.9 | 40.2 | 0 |
+| CompSci | cot | **56.9** | 66.9 | **49.4** | 0 |
+| CompSci | agent | 42.9 | 59.0 | 44.3 | 95 / 608 (15.6%) |
+
+Three findings, both domains:
+
+1. **Step-by-step prompting pays, and only on Compute.** +5.0 points on Biology
+   against a 0.7-point spread, with the entire gain on derived-answer questions and
+   none on lookup.
+2. **Tools and autonomy do not.** The agent is last in both domains, losing most
+   heavily on Lookup — it writes code to retrieve values a plain call simply reads.
+   Among answered items it invoked its tool on 123/123 (Biology) and 512/513
+   (CompSci), so it is not exercising discretion.
+3. **Non-termination is the real failure mode.** 15–18% of agent runs end with
+   `Max turns (8) exceeded` and no answer. Scoring those as wrong answers would
+   understate the agent by a further 7.6–8.5 points and misattribute a control-flow
+   failure to reasoning.
+
+Abstention precision falls monotonically as machinery is added (Biology
+0.54 → 0.29 → 0.21; CompSci 0.77 → 0.72 → 0.50): the plain call is the most reliable
+at knowing when not to answer.
 
 ## The three reporting rules
 

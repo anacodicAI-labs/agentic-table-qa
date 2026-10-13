@@ -1,0 +1,64 @@
+==============================================================================
+RESULTS SUMMARY -- every number quoted in the paper
+model gpt-4o-mini, temperature 0.0, agent turn cap 8
+==============================================================================
+
+BIOLOGY -- baseline and cot, full domain
+  (n=460 questions, final repeat of 3)
+  config         n  noans  acc(all)  acc(ans)   Lookup  Compute
+  baseline     460      0     56.1%     56.1%    77.6%    40.2%
+  cot          460      0     60.4%     60.4%    76.5%    48.5%
+
+BIOLOGY -- agent, seeded sample
+  (n=150 (seed 7), final repeat of 3)
+  config         n  noans  acc(all)  acc(ans)   Lookup  Compute
+  agent        150     27     38.7%     47.2%    58.2%    38.2%
+
+BIOLOGY -- MATCHED on the agent's questions
+  (baseline/cot n may exceed 150: a few question strings recur across tables)
+  config         n  noans  acc(all)  acc(ans)   Lookup  Compute
+  agent        150     27     38.7%     47.2%    58.2%    38.2%
+  baseline     154      0     51.9%     51.9%    76.5%    32.6%
+  cot          154      0     55.8%     55.8%    75.0%    40.7%
+
+COMPSCI -- transfer arm, full domain
+  (n=608, single run)
+  config         n  noans  acc(all)  acc(ans)   Lookup  Compute
+  agent        608     95     42.9%     50.5%    59.0%    44.3%
+  baseline     608      0     51.6%     51.6%    66.9%    40.2%
+  cot          608      0     56.9%     56.9%    66.9%    49.4%
+
+RUN-TO-RUN SPREAD (Biology)
+  baseline    55.9% +/- 0.7   runs: 55.2, 56.5, 56.1
+  cot         60.9% +/- 0.7   runs: 61.7, 60.7, 60.4
+  agent       40.2% +/- 1.4   runs: 40.7, 41.3, 38.7
+
+RUN-TO-RUN SPREAD (CompSci)
+  baseline    51.6%  (single run)   runs: 51.6
+  cot         56.9%  (single run)   runs: 56.9
+  agent       42.9%  (single run)   runs: 42.9
+
+ABSTENTION -- Biology, matched
+  config      abstained  correct  precision  hallucination
+  agent              14        3       0.21         94.7%
+  baseline           24       13       0.54         77.6%
+  cot                 7        2       0.29         96.6%
+
+ABSTENTION -- CompSci
+  config      abstained  correct  precision  hallucination
+  agent              38       19       0.50         93.6%
+  baseline           87       67       0.77         77.6%
+  cot                18       13       0.72         95.7%
+
+AGENT TOOL USE AND NON-TERMINATION
+  Biology: unanswered 27/150 (18.0%) -- turn cap exhausted
+           tool used    : n= 123  accuracy 47.2%
+  CompSci: unanswered 95/608 (15.6%) -- turn cap exhausted
+           tool not used: n=   1  accuracy 0.0%
+           tool used    : n= 512  accuracy 50.6%
+
+COST (model calls priced at gpt-4o-mini rates)
+  Biology baseline  $0.2916 total, 1380 calls, $0.00021/question
+  Biology cot       $0.4598 total, 1380 calls, $0.00033/question
+  denominator is dollars per QUESTION; see docs/09 for why cross-paper
+  dollar figures are not comparable

@@ -34,6 +34,26 @@ def main():
     configs = sorted(df["config"].unique())
     print(f"loaded {len(df)} rows across configs: {configs}\n")
 
+    # An agent run can end without producing an answer (e.g. the turn cap is
+    # exhausted). That is an agent failure, not a wrong answer. Report accuracy both
+    # including and excluding those items -- never one alone. Older CSVs predate the
+    # `unanswered` column, so derive it from an empty prediction.
+    if "unanswered" not in df.columns:
+        df["unanswered"] = (df["pred"].fillna("").astype(str).str.strip() == "").astype(int)
+    print(f"{'config':12s} {'no answer':>10s} {'acc (all)':>10s} {'acc (answered)':>15s}")
+    for cfg in configs:
+        d = df[df["config"] == cfg]
+        answered = d[d["unanswered"] == 0]
+        exc = answered["correct"].mean() if len(answered) else float("nan")
+        print(f"{cfg:12s} {int(d['unanswered'].sum()):10d} {d['correct'].mean():9.1%} "
+              f"{exc:14.1%}")
+        if "error" in d.columns:
+            reasons = (d.loc[d["unanswered"] == 1, "error"].fillna("unknown")
+                       .astype(str).str.split(":").str[0].value_counts().head(3))
+            for reason, k in reasons.items():
+                print(f"{'':12s} {k:10d}  {reason[:48]}")
+    print()
+
     for cfg in configs:
         d = df[df["config"] == cfg]
         acc = d["correct"].mean()

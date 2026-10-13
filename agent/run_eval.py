@@ -140,8 +140,13 @@ def main():
                         # reachable (see analyze_results.py).
                         abstained = int(out["final"].strip().upper()
                                         .startswith("INSUFFICIENT"))
+                        # An agent run can end without an answer (e.g. the turn cap
+                        # is exhausted). That is an agent failure, not a wrong answer,
+                        # and must be visible in the CSV rather than silently scored 0.
                         rows.append({"question": t.question, "gold": t.gold,
                                      "pred": out["final"], "correct": good,
+                                     "error": out.get("error", ""),
+                                     "unanswered": int(not str(out["final"]).strip()),
                                      "abstained": abstained,
                                      "reasoning_type": t.reasoning_type,
                                      "task_family": t.task_family,
@@ -191,6 +196,22 @@ def main():
         print(f"  {c:12s} {a:6.1%} {cost_c[c]:9.4f} {calls_c[c]:7d} "
               f"{calls_c[c]/n:8.2f} {cpq:11.5f} "
               f"{(a/cost_c[c] if cost_c[c] else float('nan')):10.1f}")
+
+    print("\n=== agent failures (no answer produced -- NOT a wrong answer) ===")
+    for c in configs:
+        rows = last_rows[c]
+        if not rows:
+            continue
+        un = [r for r in rows if r["unanswered"]]
+        if not un:
+            print(f"  {c:12s} none")
+            continue
+        reasons = Counter((r["error"] or "unknown").split(":")[0][:48] for r in un)
+        ok_excl = sum(r["correct"] for r in rows) / (len(rows) - len(un))
+        print(f"  {c:12s} {len(un):4d}/{len(rows)} ({len(un)/len(rows):.1%})  "
+              f"accuracy excluding them {ok_excl:.1%}")
+        for reason, k in reasons.most_common(3):
+            print(f"               {k:4d}  {reason}")
 
     print("\n=== abstention (does the agent know when it cannot answer?) ===")
     print(f"  {'config':12s} {'abstained':>10s} {'correct':>8s} {'false alarm':>12s} "
