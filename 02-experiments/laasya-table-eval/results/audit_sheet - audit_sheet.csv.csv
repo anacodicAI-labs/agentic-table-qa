@@ -6,14 +6,14 @@ item_004,How many oocytes tested had premeiotic aneuploidy in total?,25,yes,yes,
 item_005,What is the average Effect value for all entries in the table?,-0.06,no,no,label_wrong,"gold value is -0.06, table value is -0.045, models report different values"
 item_006,What is the percentage of oocytes with premeiotic aneuploidy in the ca,14.50%,yes,yes,,
 item_007,How many oocytes with Simple Errors were contributed by donors in the,3,yes,yes,,
-item_008,What percentage of oocytes with premeiotic aneuploidy were tested in t,4.30%,yes,yes,label_wrong,2 of the 3 models answered correctly - agent reported wrong percentage
+item_008,What percentage of oocytes with premeiotic aneuploidy were tested in t,4.30%,yes,yes,wrong_cell,2 of the 3 models answered correctly - agent reported wrong percentage
 item_009,What is the forward primer sequence for Exon 3 & Exon 4?,ACGTAGTGCATACACCCTTG,yes,yes,,
 item_010,What is the reverse primer sequence for Exon 2?,GGAAAAGCCAAATCTAAGGTTCC,yes,yes,,
 item_011,Which region has the forward primer sequence 'GAAACCTAATAAAGCTCCACCTTC,Promoter & Exon 1,yes,yes,,
 item_012,What is the forward primer sequence for Exon 5?,GAAACAGGTTTCCTTTCCCAAG,yes,yes,,
 item_013,What is the reverse primer sequence for Promoter & Exon 1?,TTGCTCAGCATATATCTGGGGC,yes,yes,,
 item_014,What is the p-value for the gene Zinc finger protein 492?,1.30E-06,yes,yes,,
-item_015,"What is the Fold Change (FC) magnitude for the gene ATPase, Na+/K+ tra",-2.28,yes,yes,label_wrong,all 3 models neglected the negative sign - printed 2.28
+item_015,"What is the Fold Change (FC) magnitude for the gene ATPase, Na+/K+ tra",-2.28,yes,yes,other,all 3 models neglected the negative sign - printed 2.28
 item_016,What is the Gene Symbol for the gene with a p-value of 8.53E-03?,EGR4,partial,unsure,,should EGR4 be considered the same as Early Growth Response 4?
 item_017,Which gene has the highest Fold Change (FC) magnitude in this table?,CD24,partial,unsure,label_wrong,"the model just states CD24, while there's more in the table - plus for this question should the Probe ID be differentiated?"
 item_018,What is the Gene Name associated with the gene symbol THOP?,Thimet oligopeptidase I,yes,yes,,
@@ -35,13 +35,13 @@ item_033,Which category had the highest percentage of oocytes with Simple (SE),F
 item_034,What is the total number of oocytes tested in the category 'Primary/se,48,yes,yes,,
 item_035,What is the total number of variants with pre-existing personal and/or,30,yes,yes,,
 item_036,What percentage of variants in the 'Non-actionable genes' category hav,28%,no,no,label_wrong,table listed percentage as 31.8% - only 1 model scored correctly - rest + gold scored incorrectly
-item_037,How many variants in the 'Others' category have heterozygous variants,1,yes,yes,label_wrong,only one model scored correctly - rest got it incorrect
+item_037,How many variants in the 'Others' category have heterozygous variants,1,yes,yes,wrong_cell,only one model scored correctly - rest got it incorrect
 item_038,What percentage of 'Total' variants have analysis criteria not identif,22.70%,partial,unsure,label_wrong,models got it incorrect - the question doesn't specifiy the category
 item_039,How many variants in the 'MITF' gene have incidental variants?,4,yes,yes,,
 item_040,"What is the total number of cows on farms A, B, and C?",39,no,no,label_wrong,models answered correctly - gold value is incorrect
 item_041,What is the total number of observations for all farms in the table?,129,yes,yes,,
 item_042,What is the total number of variables included in non-invasive measure,51,no,no,label_wrong,both the models and the gold values don't match the table value
-item_043,What is the total number of variables included in invasive measurement,15,yes,yes,label_wrong,gold is correct - models answered incorrectly (2/3)
+item_043,What is the total number of variables included in invasive measurement,15,yes,yes,wrong_cell,gold is correct - models answered incorrectly (2/3)
 item_044,What is the average number of variables included in the invasive measu,3,no,no,label_wrong,models match table - gold answer is different
 item_045,What is the difference between the total number of variables in non-in,36,no,no,label_wrong,none of the models answered correctly - 3/3 models and gold values were incorrect
 item_046,How many variants were identified in the gene BRCA1?,7,yes,yes,,
