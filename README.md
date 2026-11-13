@@ -158,6 +158,25 @@ explicit.
 Developed in [`anacodic-agentic-cookbook`](https://github.com/anacodicAI-labs/anacodic-agentic-cookbook)
 under `02-experiments/`. This repository is the citable artifact for the paper.
 
+## Authors and contributions
+
+This repository accompanies the paper and is authored by the same team. Roles follow the
+CRediT taxonomy, as declared in the manuscript.
+
+| | Contribution |
+|---|---|
+| **Laasya Vavilapalli** | Methodology; software; validation; formal analysis; data curation; visualization |
+| **Rashanjot Kaur** | Conceptualization; methodology; software; supervision |
+| **Bhanu Sharma** | Conceptualization; validation; investigation; project administration |
+| **Eugene Pinsky** | Conceptualization; supervision |
+
+The commit log records individual contributions where they were made directly. The
+contribution record above is the authoritative division of work.
+
+## Citation
+
+See `CITATION.cff`, or use GitHub's "Cite this repository" button.
+
 ## Licence
 
 Code: MIT. SciTableQA is distributed by its authors under the MIT licence.

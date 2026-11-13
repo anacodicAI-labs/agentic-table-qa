@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite the paper below."
+title: "agentic-table-qa: a tool-using agent and evaluation harness for table-grounded question answering"
+abstract: >-
+  Code, evaluation harness and committed results for the paper
+  "Do Agentic Components Earn Their Cost? Reasoning, Tools and Abstention in
+  Table Question Answering".
+type: software
+license: MIT
+repository-code: "https://github.com/anacodicAI-labs/agentic-table-qa"
+authors:
+  - family-names: Vavilapalli
+    given-names: Laasya
+    orcid: "https://orcid.org/0009-0001-6472-0723"
+    affiliation: "RISE Lab, Boston University, Boston, MA, USA"
+  - family-names: Kaur
+    given-names: Rashanjot
+    orcid: "https://orcid.org/0009-0001-4572-9968"
+    affiliation: "MET Department of Computer Science, Boston University, Boston, MA, USA"
+  - family-names: Sharma
+    given-names: Bhanu
+    orcid: "https://orcid.org/0009-0006-5003-9474"
+    affiliation: "College of Science, Northeastern University, Boston, MA, USA"
+  - family-names: Pinsky
+    given-names: Eugene
+    orcid: "https://orcid.org/0000-0002-3836-1851"
+    affiliation: "MET Department of Computer Science, Boston University, Boston, MA, USA"
+keywords:
+  - agentic AI
+  - tool use
+  - table question answering
+  - evaluation
+  - reproducibility
