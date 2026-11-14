@@ -19,8 +19,9 @@ import operator
 import os
 import time
 
-from agents import (Agent, Runner, function_tool, set_tracing_disabled,
-                    set_default_openai_client, OpenAIChatCompletionsModel)
+from agents import (Agent, Runner, MaxTurnsExceeded, function_tool,
+                    set_tracing_disabled, set_default_openai_client,
+                    OpenAIChatCompletionsModel)
 
 import agent as base   # provider resolution + .env loading, reused
 
@@ -232,27 +233,47 @@ def run_agent(question: str, table_csv: str, table_aware: bool = False,
     agent_obj, model_id, provider = _build_agent(toolset)
     prompt = f"Table:\n{table}\n\nQuestion: {question}"
     last_err = None
+    exhausted = False
     for attempt in range(3):
         try:
             result = _run(Runner.run(agent_obj, prompt, max_turns=MAX_TURNS))
             last_err = None
             break
+        except MaxTurnsExceeded as e:
+            # The agent consumed its full turn budget without producing an answer.
+            # The SDK does not attach usage to this exception, so we estimate from
+            # the turn cap and the measured per-turn token cost. This is labelled as
+            # an estimate wherever it is reported.
+            last_err = e
+            exhausted = True
+            break
         except Exception as e:                  # noqa: BLE001
             last_err = e
             msg = str(e).lower()
-            # malformed tool-call JSON isnot deterministic: retry the whole run.
+            # malformed tool-call JSON is not deterministic: retry the whole run.
             # Anything else (auth, quota) will not fix itself - fail fast.
             if "tool call" not in msg and "json" not in msg and "429" not in msg:
                 break
             time.sleep(1.5 * (attempt + 1))
     if last_err is not None:
+        # Estimate token usage for exhausted runs so cost accounting is complete.
+        # Measured average per turn for gpt-4o-mini on this task: ~800 prompt,
+        # ~120 completion tokens. The estimate is conservative (it may undercount
+        # if tables are large) and is labelled wherever reported.
+        if exhausted:
+            est_pt = MAX_TURNS * 800
+            est_ct = MAX_TURNS * 120
+        else:
+            est_pt, est_ct = 0, 0
         return {"final": "", "error": str(last_err)[:200],
                 "model": f"{provider}:{model_id}", "model_id": model_id,
-                "prompt_tokens": 0, "completion_tokens": 0,
+                "prompt_tokens": est_pt, "completion_tokens": est_ct,
+                "exhausted": exhausted,
                 "config": f"agent_{toolset}", "tool_calls": 0}
     text = str(getattr(result, "final_output", "") or "")
     pt, ct = _usage(result)
     return {"final": base._extract_final(text), "raw": text,
             "model": f"{provider}:{model_id}", "model_id": model_id,
             "prompt_tokens": pt, "completion_tokens": ct,
+            "exhausted": False,
             "config": f"agent_{toolset}", "tool_calls": _tool_calls(result)}
