@@ -50,18 +50,21 @@ ABSTENTION -- CompSci
   baseline           87       67       0.77         77.6%
   cot                18       13       0.72         95.7%
 
-AGENT TOOL USE AND NON-TERMINATION
-  Biology: unanswered 27/150 (18.0%) -- turn cap exhausted
+AGENT TOOL USE AND TURN-BUDGET EXHAUSTION
+  Biology: unanswered 27/150 (18.0%) -- turn cap (8) exhausted
            tool used    : n= 123  accuracy 47.2%
-  CompSci: unanswered 95/608 (15.6%) -- turn cap exhausted
+  CompSci: unanswered 95/608 (15.6%) -- turn cap (8) exhausted
            tool not used: n=   1  accuracy 0.0%
            tool used    : n= 512  accuracy 50.6%
 
 COST (model calls priced at gpt-4o-mini rates)
-  Biology baseline  $0.2916 total, 1380 calls, $0.00021/question
-  Biology cot       $0.4598 total, 1380 calls, $0.00033/question
-  denominator is dollars per QUESTION; see docs/09 for why cross-paper
-  dollar figures are not comparable
+  domain     config         total   calls  $/question note
+  Biology    agent      $0.1944      853 >=$0.00043  lower bound: 27/150 runs exhausted the turn cap and returned zero token counts
+  Biology    baseline   $0.2916     1380   $0.00021  
+  Biology    cot        $0.4598     1380   $0.00033  
+  CompSci    agent      $0.5200     2740 >=$0.00086  lower bound: 95/608 runs exhausted the turn cap and returned zero token counts
+  CompSci    baseline   $0.2150      608   $0.00035  
+  CompSci    cot        $0.3160      608   $0.00052  
 
 SCOREABLE SUBSET -- Biology (baseline/cot full domain + agent sample)
   excluded as unscoreable: 179/1070 (16.7%) -- meta-label or free-text gold
@@ -82,3 +85,33 @@ TURN-BUDGET SENSITIVITY
   Re-run at cap 20: 24 terminated (88.9%), 3 still did not,
   and 7 were correct (25.9% of the failed set).
   The extra turn budget therefore buys termination, not accuracy.
+
+SIGNIFICANCE -- Biology (matched: baseline, cot, agent on same questions)
+
+  Bootstrap 95% CIs (10,000 resamples, seed=42)
+  config         acc           95% CI      n
+  agent        38.7% [ 31.3%,  46.7%]    150
+  baseline     51.9% [ 44.2%,  59.7%]    154
+  cot          55.8% [ 48.1%,  63.6%]    154
+
+  McNemar exact tests (paired, two-sided)
+  comparison                       b     c          p       OR   sig
+      baseline vs cot             15     9     0.3075     1.67 
+      baseline vs agent           13    33     0.0045     0.39  *
+           cot vs agent            9    35     0.0001     0.26  *
+  (Holm-Bonferroni correction; * = significant at family alpha 0.05)
+
+SIGNIFICANCE -- CompSci (full domain)
+
+  Bootstrap 95% CIs (10,000 resamples, seed=42)
+  config         acc           95% CI      n
+  agent        42.9% [ 39.1%,  46.9%]    608
+  baseline     51.6% [ 47.7%,  55.4%]    608
+  cot          56.9% [ 53.0%,  60.9%]    608
+
+  McNemar exact tests (paired, two-sided)
+  comparison                       b     c          p       OR   sig
+      baseline vs cot             71    39     0.0029     1.82  *
+      baseline vs agent           51   104     0.0000     0.49  *
+           cot vs agent           39   124     0.0000     0.31  *
+  (Holm-Bonferroni correction; * = significant at family alpha 0.05)

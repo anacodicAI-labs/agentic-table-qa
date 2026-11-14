@@ -6,3 +6,5 @@ __pycache__/
 data/
 results_demo/
 results_smoketest/
+results_v2/
+agent/results/

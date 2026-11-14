@@ -2,7 +2,7 @@
 
 Biology uses the MATCHED subset (the agent's 150 questions) so all three
 configurations are scored on identical items. CompSci is the full single run.
-Answered items only, so agent non-termination is not double-counted here; it is
+Answered items only, so agent turn-budget exhaustion is not double-counted here; it is
 reported separately in the paper.
 """
 import matplotlib

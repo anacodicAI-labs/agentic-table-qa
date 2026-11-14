@@ -1,6 +1,8 @@
 openai>=1.40
-openai-agents>=0.23
+openai-agents==0.23.1
 pandas>=2.0
 matplotlib>=3.7
 nbformat>=5.9
 nest_asyncio>=1.6
+scipy>=1.11
+numpy>=1.24

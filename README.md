@@ -26,27 +26,42 @@ Averaging a largely solved family with an unsolved one hides both.
 ## Layout
 
 ```
-agent/   the system
-  scitableqa_loader.py   loads (question, gold, table) triples from a local cache
-  table_tools.py         CSV -> markdown / DataFrame
-  scorer.py              numeric-aware exact match
-  agent.py               plain model call (baseline, cot)
-  agent_sdk.py           the tool-using agent (OpenAI Agents SDK)
-  run_eval.py            runs the configurations and writes result CSVs
-  01..05_*.ipynb         walkthrough notebooks: data, scoring, baseline, agent, experiment
+agent/                  the system
+  scitableqa_loader.py    loads (question, gold, table) triples from a local cache
+  table_tools.py          CSV -> markdown / DataFrame
+  scorer.py               numeric-aware exact match
+  agent.py                plain model call (baseline, cot)
+  agent_sdk.py            the tool-using agent (OpenAI Agents SDK)
+  nbio.py                 spend ceiling and notebook plumbing
+  run_eval.py             runs the configurations and writes result CSVs
+  make_results_summary.py generates results/RESULTS_SUMMARY.txt
+  turncap_probe.py        re-runs exhausted items at a higher turn cap
+  01..05_*.ipynb          walkthrough notebooks: data, scoring, baseline, agent, experiment
 
-eval/    the analysis
-  analyze_results.py     accuracy by family, ablation delta, abstention calibration
-  01..03_*.ipynb         run the experiment, analyse results, error analysis
-  START_HERE.md          setup and tasks
+eval/                   the analysis
+  analyze_results.py      accuracy by family, ablation delta, abstention calibration
+  01..03_*.ipynb          run the experiment, analyse results, error analysis
+
+audit/                  independent validation (Laasya Vavilapalli)
+  notebooks/              audit summary and accuracy analysis
+  results/                audit outputs and figures
+
+results/                committed results
+  bio_fast/               Biology baseline and cot (460 x 3 repeats, final repeat)
+  bio_agent/              Biology agent (150 x 3 repeats, seed 7, final repeat)
+  compsci/                CompSci transfer arm (608 x 1)
+  turncap_probe.csv       turn-cap sensitivity probe (27 items at cap 20)
+  RESULTS_SUMMARY.txt     single source of truth for every number in the paper
 ```
 
 ## Setup
 
 ```bash
-pip install openai openai-agents pandas matplotlib nbformat nest_asyncio
+pip install openai openai-agents pandas matplotlib nbformat nest_asyncio scipy numpy
 echo "OPENAI_API_KEY=sk-..." > .env          # or GROQ_API_KEY
 ```
+
+`.env` is gitignored. Never commit a key and never paste one into a message.
 
 The benchmark (SciTableQA, MIT licence) is cached locally on first use, after which
 evaluation makes no network calls beyond the model API.
@@ -62,17 +77,17 @@ cd agent
 # Biology, baseline and cot, full domain, three repeats
 BUDGET_USD=1.20 python run_eval.py --domain Biology \
     --configs baseline,cot --repeats 3 --limit 460 \
-    --out-dir results_v2/bio_fast
+    --out-dir ../results/bio_fast
 
 # Biology, agent, seeded 150-question sample, three repeats
 BUDGET_USD=1.50 python run_eval.py --domain Biology \
     --configs agent --repeats 3 --limit 150 --sample-seed 7 \
-    --out-dir results_v2/bio_agent
+    --out-dir ../results/bio_agent
 
 # CompSci transfer arm, full domain, single run
 BUDGET_USD=1.50 python run_eval.py --domain CompSci \
     --configs baseline,cot,agent --repeats 1 --limit 608 \
-    --out-dir results_v2/compsci
+    --out-dir ../results/compsci
 ```
 
 The agent config is run separately because it is multi-turn and far slower than the
@@ -81,8 +96,9 @@ plain calls; keeping it in its own process stops it blocking the other repeats.
 Then regenerate the summary that the paper cites:
 
 ```bash
-python make_results_summary.py        # -> results/RESULTS_SUMMARY.txt
-cd ../eval && python analyze_results.py
+cd ..   # back to the repository root
+python agent/make_results_summary.py   # writes results/RESULTS_SUMMARY.txt
+python eval/analyze_results.py         # reads results/ and saves a figure
 ```
 
 `results/RESULTS_SUMMARY.txt` is the single source of truth: no number appears in the
@@ -90,10 +106,10 @@ paper that this script does not produce.
 
 ## Results
 
-Accuracy on answered items, by task family. Biology figures are the mean of three
-runs; CompSci is a single run.
+Accuracy on all items (including unanswered), by task family. Biology figures are the
+mean of three runs; CompSci is a single run.
 
-| Domain | Config | Overall | Lookup | Compute | No answer |
+| Domain | Config | Overall | Lookup | Compute | Unanswered |
 |---|---|---|---|---|---|
 | Biology | baseline | 55.9 ± 0.7 | 77.6 | 40.2 | 0 |
 | Biology | cot | **60.9 ± 0.7** | 76.5 | **48.5** | 0 |
@@ -102,23 +118,27 @@ runs; CompSci is a single run.
 | CompSci | cot | **56.9** | 66.9 | **49.4** | 0 |
 | CompSci | agent | 42.9 | 59.0 | 44.3 | 95 / 608 (15.6%) |
 
+Biology Overall is the three-run mean; Lookup and Compute are from the final repeat
+only (the CSV retains per-item rows from the last run). CompSci is a single run.
+
 Three findings, both domains:
 
 1. **Step-by-step prompting pays, and only on Compute.** +5.0 points on Biology
    against a 0.7-point spread, with the entire gain on derived-answer questions and
-   none on lookup.
+   none on Lookup.
 2. **Tools and autonomy do not.** The agent is last in both domains, losing most
-   heavily on Lookup — it writes code to retrieve values a plain call simply reads.
+   heavily on Lookup. It writes code to retrieve values a plain call simply reads.
    Among answered items it invoked its tool on 123/123 (Biology) and 512/513
    (CompSci), so it is not exercising discretion.
-3. **Non-termination is the real failure mode.** 15–18% of agent runs end with
-   `Max turns (8) exceeded` and no answer. Scoring those as wrong answers would
-   understate the agent by a further 7.6–8.5 points and misattribute a control-flow
-   failure to reasoning.
+3. **Turn-budget exhaustion is the failure mode, not a reliability defect.** 15--18%
+   of agent runs end with `Max turns (8) exceeded` and no answer. At cap 20, 24/27
+   (89%) terminate but only 7 are correct, so the extra budget buys termination, not
+   accuracy. Scoring those as wrong answers would understate the agent by a further
+   7.6--8.5 points and misattribute a control-flow failure to reasoning.
 
 Abstention precision falls monotonically as machinery is added (Biology
-0.54 → 0.29 → 0.21; CompSci 0.77 → 0.72 → 0.50): the plain call is the most reliable
-at knowing when not to answer.
+0.54 -> 0.29 -> 0.21; CompSci 0.77 -> 0.72 -> 0.50): the plain call is the most
+reliable at knowing when not to answer.
 
 ## The three reporting rules
 
@@ -152,11 +172,6 @@ accuracy. Measured grounded rates:
 
 Results are reported on both the verifiable subset and the full set so the ceiling is
 explicit.
-
-## Development history
-
-Developed in [`anacodic-agentic-cookbook`](https://github.com/anacodicAI-labs/anacodic-agentic-cookbook)
-under `02-experiments/`. This repository is the citable artifact for the paper.
 
 ## Authors and contributions
 
