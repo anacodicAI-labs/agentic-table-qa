@@ -41,16 +41,23 @@ PER_RUN = {
 # not captured by the meter.  Both the figure and the caveat are stated.
 # ---------------------------------------------------------------------------
 MEASURED_COST = {
+    # Biology: metered during the actual runs.
     ("Biology", "baseline"): {"usd": 0.2916, "calls": 1380},
     ("Biology", "cot"):      {"usd": 0.4598, "calls": 1380},
     ("Biology", "agent"):    {"usd": 0.1944, "calls": 853,
                               "note": "lower bound: 27/150 runs exhausted the "
                                       "turn cap and returned zero token counts"},
-    ("CompSci", "baseline"): {"usd": 0.2150, "calls": 608},
-    ("CompSci", "cot"):      {"usd": 0.3160, "calls": 608},
-    ("CompSci", "agent"):    {"usd": 0.5200, "calls": 2740,
-                              "note": "lower bound: 95/608 runs exhausted the "
-                                      "turn cap and returned zero token counts"},
+    # CompSci: estimated from Biology per-call rates (single run, 608 items).
+    # baseline/cot: 608 calls each, at Bio per-call rates.
+    # agent: 513 answered items with 1843 tool calls + 95 exhausted items x 8 turns,
+    # estimated at Bio agent per-call rate.
+    ("CompSci", "baseline"): {"usd": 0.1283, "calls": 608,
+                              "note": "estimated from Biology per-call rate"},
+    ("CompSci", "cot"):      {"usd": 0.2026, "calls": 608,
+                              "note": "estimated from Biology per-call rate"},
+    ("CompSci", "agent"):    {"usd": 0.7104, "calls": 3116,
+                              "note": "estimated from Biology per-call rate; "
+                                      "95/608 runs exhausted the turn cap"},
 }
 
 
@@ -152,7 +159,7 @@ def cost_block():
         total_items = items.get(domain, {}).get(cfg, 0) * reps
         cpq = m["usd"] / total_items if total_items else 0.0
         note = m.get("note", "")
-        lb = ">=" if note else "  "
+        lb = ">=" if "lower bound" in note or "exhausted" in note else "~=" if "estimated" in note else "  "
         print(f"  {domain:10s} {cfg:10s} ${m['usd']:.4f}  {m['calls']:7d} "
               f"{lb}${cpq:.5f}  {note}")
 

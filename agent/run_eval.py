@@ -207,7 +207,8 @@ def main():
             print(f"  {c:12s} none")
             continue
         reasons = Counter((r["error"] or "unknown").split(":")[0][:48] for r in un)
-        ok_excl = sum(r["correct"] for r in rows) / (len(rows) - len(un))
+        answered = len(rows) - len(un)
+        ok_excl = sum(r["correct"] for r in rows) / answered if answered else 0.0
         print(f"  {c:12s} {len(un):4d}/{len(rows)} ({len(un)/len(rows):.1%})  "
               f"accuracy excluding them {ok_excl:.1%}")
         for reason, k in reasons.most_common(3):

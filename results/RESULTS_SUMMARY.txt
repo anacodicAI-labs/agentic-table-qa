@@ -62,9 +62,9 @@ COST (model calls priced at gpt-4o-mini rates)
   Biology    agent      $0.1944      853 >=$0.00043  lower bound: 27/150 runs exhausted the turn cap and returned zero token counts
   Biology    baseline   $0.2916     1380   $0.00021  
   Biology    cot        $0.4598     1380   $0.00033  
-  CompSci    agent      $0.5200     2740 >=$0.00086  lower bound: 95/608 runs exhausted the turn cap and returned zero token counts
-  CompSci    baseline   $0.2150      608   $0.00035  
-  CompSci    cot        $0.3160      608   $0.00052  
+  CompSci    agent      $0.7104     3116 >=$0.00117  estimated from Biology per-call rate; 95/608 runs exhausted the turn cap
+  CompSci    baseline   $0.1283      608 ~=$0.00021  estimated from Biology per-call rate
+  CompSci    cot        $0.2026      608 ~=$0.00033  estimated from Biology per-call rate
 
 SCOREABLE SUBSET -- Biology (baseline/cot full domain + agent sample)
   excluded as unscoreable: 179/1070 (16.7%) -- meta-label or free-text gold
