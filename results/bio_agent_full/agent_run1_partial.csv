@@ -1,0 +1,451 @@
+question,gold,pred,correct,error,unanswered,abstained,reasoning_type,task_family,grounded,tool_calls,model,config,run
+What is the total length of the sequence formed by concatenating the forward and reverse primers for Promoter & Exon 1?,48 nucleotides,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,agent,1
+What is the difference in length between the forward and reverse primers for Exon 2?,3 nucleotides,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,agent,1
+What is the total length of the sequence formed by concatenating the forward and reverse primers for Exon 3 & Exon 4?,46 nucleotides,44,0,,0,0,Arithmetic,Compute,0,4,openai:gpt-4o-mini,agent,1
+What is the total length of the sequence formed by concatenating the forward and reverse primers for Exon 5?,46 nucleotides,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,agent,1
+What is the difference in length between the forward and reverse primers for Promoter & Exon 1?,0 nucleotides,2 units,0,,0,0,Arithmetic,Compute,0,3,openai:gpt-4o-mini,agent,1
+What is the average p-value for UP-regulated genes?,0.00034,0.0009400811538461536,0,,0,0,Calculation,Compute,0,7,openai:gpt-4o-mini,agent,1
+What is the maximum Fold Change (FC) magnitude for DOWN-regulated genes?,Maximum FC magnitude for DOWN-regulated genes is 3.23,INSUFFICIENT,0,,0,1,Identification,Lookup,0,3,openai:gpt-4o-mini,agent,1
+What is the difference in FC magnitude between 'CD24 antigen' and 'EGR4' genes?,The difference in FC magnitude between the 'CD24 antigen' and 'EGR4' genes is 1.17,-0.15,0,,0,0,Calculation,Compute,0,3,openai:gpt-4o-mini,agent,1
+What is the sum of the FC magnitude for the top 3 genes with the lowest p-values?,The sum of the FC magnitudes for the top 3 genes with the lowest p-values is 7.61,,0,Max turns (8) exceeded,1,0,Calculation,Compute,0,0,openai:gpt-4o-mini,agent,1
+How many genes have a FC magnitude greater than 2.5?,1 gene has an FC magnitude greater than 2.5,1,1,,0,0,Counting,Compute,0,1,openai:gpt-4o-mini,agent,1
+What is the average age at disease onset for patients with Cutaneous involvement and Musculo-skeletal disorders?,The average age at disease onset for patients with both cutaneous involvement and musculoskeletal disorders is 10.1 years.,14.0 years,0,,0,0,Arithmetic,Compute,0,2,openai:gpt-4o-mini,agent,1
+What percentage of patients with Peripheral and central nervous system involvement have fever?,87.5% of patients with peripheral and central nervous system involvement have fever.,INSUFFICIENT,0,,0,1,Percentage Calculation,Compute,0,1,openai:gpt-4o-mini,agent,1
+What is the total CRP level of patients without Cutaneous involvement or Musculo-skeletal disorders?,205 mg/L,5.0 mg/L,0,,0,0,Arithmetic,Compute,0,3,openai:gpt-4o-mini,agent,1
+How many patients have Ischaemic strokes and meningitis?,1 patient (E1) has both ischaemic strokes and meningitis.,0,0,,0,0,Counting,Compute,0,1,openai:gpt-4o-mini,agent,1
+What is the most common Current treatment among the patients?,The most common Current treatment among the patients is TNF alpha blockade.,TNF alpha blockade,0,,0,0,Most Common,Compute,0,1,openai:gpt-4o-mini,agent,1
+What percentage of oocytes tested in the category 'Female carriers of structural rearrangements or monogenic disorders' had premeiotic aneuploidy?,6.66%,6.67%,1,,0,0,Percentage Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+How many oocytes with Simple Errors were contributed by donors in the category 'Oocyte preservation due to breast cancer'?,1,1 oocyte with Simple Errors,1,,0,0,Counting,Compute,1,3,openai:gpt-4o-mini,agent,1
+What is the total number of donors contributing oocytes with premeiotic aneuploidy across all categories?,4 DONORS,19,0,,0,0,Counting,Compute,0,1,openai:gpt-4o-mini,agent,1
+What percentage of oocytes tested had Simple Errors in the category 'Females at increased risk of developing breast/ ovarian cancer due to BRCA1/2 gene mutations'?,0%,0%,1,,0,0,Percentage Calculation,Compute,1,2,openai:gpt-4o-mini,agent,1
+How many oocytes tested had premeiotic aneuploidy in total?,25,32,0,,0,0,Counting,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the difference between the AF values of rs201385366 and rs76866386#?,0.058,0.058,1,,0,0,Arithmetic,Compute,0,3,openai:gpt-4o-mini,agent,1
+"What is the product of SE values for rs10212439, rs13151374, and rs543895501?",0.000288,0.000192,0,,0,0,Arithmetic,Compute,0,4,openai:gpt-4o-mini,agent,1
+"What is the sum of P values for rs8008070#, rs261290#, and rs151223356P?",1.9×10^−10,1.9e-10,0,,0,0,Arithmetic,Compute,0,7,openai:gpt-4o-mini,agent,1
+What is the ratio of Lipid species values for rs534693155 and rs3902951?,3.44,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,12,openai:gpt-4o-mini,agent,1
+What is the average Effect value for all entries in the table?,-0.06,0.4826666666666667,0,,0,0,Arithmetic,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the percentage of oocytes with premeiotic aneuploidy in the category of Female fertility status unknown?,14.5%,14.5%,1,,0,0,Percentage Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+How many oocytes with Simple Errors were contributed by donors in the category of Primary/secondary female factor infertility?,3,3 oocytes with Simple Errors.,1,,0,0,Counting,Compute,1,6,openai:gpt-4o-mini,agent,1
+What is the total number of donors contributing oocytes with premeiotic aneuploidy across all categories?,11 donors,11,1,,0,0,Summation,Compute,0,1,openai:gpt-4o-mini,agent,1
+What percentage of oocytes with premeiotic aneuploidy were tested in the category of Oocyte preservation due to social reasons?,4.3%,4.3%,1,,0,0,Percentage Calculation,Compute,1,3,openai:gpt-4o-mini,agent,1
+How many donors contributed oocytes in the category of Female fertility status unknown?,27 donors,6 donors,0,,0,0,Counting,Compute,0,1,openai:gpt-4o-mini,agent,1
+What is the forward primer sequence for Exon 3 & Exon 4?,ACGTAGTGCATACACCCTTG,ACGTAGTGCATACACCCTTG,1,,0,0,Cell Selection,Lookup,1,3,openai:gpt-4o-mini,agent,1
+What is the reverse primer sequence for Exon 2?,GGAAAAGCCAAATCTAAGGTTCC,GGAAAAGCCAAATCTAAGGTTCC,1,,0,0,Cell Selection,Lookup,1,4,openai:gpt-4o-mini,agent,1
+Which region has the forward primer sequence 'GAAACCTAATAAAGCTCCACCTTC'?,Promoter & Exon 1,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,agent,1
+What is the forward primer sequence for Exon 5?,GAAACAGGTTTCCTTTCCCAAG,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,agent,1
+What is the reverse primer sequence for Promoter & Exon 1?,TTGCTCAGCATATATCTGGGGC,'TTGCTCAGCATATATCTGGGGC',1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the p-value for the gene Zinc finger protein 492?,1.30E-06,1.30E-06,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+"What is the Fold Change (FC) magnitude for the gene ATPase, Na+/K+ transporting, alpha 3 polypeptide?",-2.28,-2.28,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the Gene Symbol for the gene with a p-value of 8.53E-03?,EGR4,INSUFFICIENT,0,,0,1,Cell Selection,Lookup,1,5,openai:gpt-4o-mini,agent,1
+Which gene has the highest Fold Change (FC) magnitude in this table?,CD24,,0,Max turns (8) exceeded,1,0,Identification,Lookup,1,0,openai:gpt-4o-mini,agent,1
+What is the Gene Name associated with the gene symbol THOP?,Thimet oligopeptidase I,(small cell lung carcinoma cluster 4 antigen) Thimet oligopeptidase I,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the age at disease onset for patient A1?,3.5 years,3.5,1,,0,0,Cell Selection,Lookup,0,1,openai:gpt-4o-mini,agent,1
+Does patient B2 have musculoskeletal disorders?,"Yes, arthritis; arthralgia",Yes,0,,0,0,Cell Selection,Lookup,0,3,openai:gpt-4o-mini,agent,1
+What is the CRP level for patient C1?,65 mg/L,65,1,,0,0,Cell Selection,Lookup,0,1,openai:gpt-4o-mini,agent,1
+Does patient D1 have immunologic/haematologic involvement?,"Yes, low IgM level; lymphopenia",Yes,0,,0,0,Cell Selection,Lookup,0,1,openai:gpt-4o-mini,agent,1
+What is the current treatment for patient E1?,Steroids,Steroids,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+How many donors contributed oocytes with premeiotic aneuploidy in the category of Oocyte preservation due to breast cancer?,2 donors,2 donors,1,,0,0,Counting,Compute,1,1,openai:gpt-4o-mini,agent,1
+What percentage of oocytes tested in the category of Females at increased risk of developing breast/ ovarian cancer due to BRCA1/2 gene mutations had premeiotic aneuploidy?,0%,0.0%,1,,0,0,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+How many oocytes had Simple (SE) Errors in the category of Female carriers of structural rearrangements or monogenic disorders?,1,1 oocyte.,1,,0,0,Counting,Compute,1,1,openai:gpt-4o-mini,agent,1
+What was the total number of oocytes with premeiotic aneuploidy in the table?,25,32,0,,0,0,Summation,Compute,1,2,openai:gpt-4o-mini,agent,1
+How many donors contributed oocytes with premeiotic aneuploidy in the table overall?,15 donors,19 donors,0,,0,0,Counting,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the Lipid species for the SNP rs201385366?,LPE(22:6;0),LPE(22:6;0),1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the Effect for the SNP rs534693155?,1.24,'1.24',1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the Position for the SNP rs11570891?,8:19822810,8:19822810,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the Gene for the SNP rs140645847?,SHTN1,SHTN1,1,,0,0,Cell Selection,Lookup,1,2,openai:gpt-4o-mini,agent,1
+What is the P value for the SNP rs10790495?,2.1 x 10-8,2.1 x 10-8,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+How many donors contributed oocytes with premeiotic aneuploidy in the category 'Female fertility status unknown'?,6 donors,6 donors,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What percentage of oocytes tested in the category 'Primary/secondary female factor infertility' had premeiotic aneuploidy?,12.5%,12.5%,1,,0,0,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+How many oocytes had Simple (SE) Errors in the category 'Oocyte preservation due to social reasons'?,1(SE),1,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+Which category had the highest percentage of oocytes with Simple (SE) Errors?,Female fertility status unknown,3.Oocyte preservation due to social reasons,0,,0,0,Comparison,Compute,1,4,openai:gpt-4o-mini,agent,1
+What is the total number of oocytes tested in the category 'Primary/secondary female factor infertility'?,48,48,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the total number of variants with pre-existing personal and/or family criteria for genetic analysis in the 'Actionable genes' category?,30,0,0,,0,0,Arithmetic,Compute,1,1,openai:gpt-4o-mini,agent,1
+What percentage of variants in the 'Non-actionable genes' category have more than one incidental variant?,28%,,0,Max turns (8) exceeded,1,0,Percentage Calculation,Compute,1,0,openai:gpt-4o-mini,agent,1
+How many variants in the 'Others' category have heterozygous variants of recessive conditions known before EXOMA?,1,INSUFFICIENT,0,,0,1,Arithmetic,Compute,1,6,openai:gpt-4o-mini,agent,1
+What percentage of 'Total' variants have analysis criteria not identified by the oncologist?,22.7%,26.7%,0,,0,0,Percentage Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+How many variants in the 'MITF' gene have incidental variants?,4,4,1,,0,0,Arithmetic,Compute,1,2,openai:gpt-4o-mini,agent,1
+"What is the total number of cows on farms A, B, and C?",39,398,0,,0,0,Arithmetic,Compute,1,1,openai:gpt-4o-mini,agent,1
+"What is the average number of observations per farm for farms D, E, and F?",10.33,10.67,0,,0,0,Arithmetic,Compute,0,4,openai:gpt-4o-mini,agent,1
+"What is the total number of cows on farms G, H, and I?",393,393,1,,0,0,Arithmetic,Compute,0,4,openai:gpt-4o-mini,agent,1
+"What is the average number of cows per farm for farms J, K, and L?",106,123.0,0,,0,0,Arithmetic,Compute,0,4,openai:gpt-4o-mini,agent,1
+What is the total number of observations for all farms in the table?,129,INSUFFICIENT,0,,0,1,Arithmetic,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the total number of variables included in non-invasive measurements?,51,13,0,,0,0,Calculation,Compute,1,3,openai:gpt-4o-mini,agent,1
+What is the average number of variables included in the non-invasive measurements?,3.375,3.740740740740741,0,,0,0,Calculation,Compute,0,5,openai:gpt-4o-mini,agent,1
+What is the total number of variables included in invasive measurements?,15,The total number of variables included in invasive measurements is 15.,1,,0,0,Calculation,Compute,1,6,openai:gpt-4o-mini,agent,1
+What is the average number of variables included in the invasive measurements?,3,3.75,0,,0,0,Calculation,Compute,1,8,openai:gpt-4o-mini,agent,1
+What is the difference between the total number of variables in non-invasive and invasive measurements?,36,,0,Max turns (8) exceeded,1,0,Calculation,Compute,1,0,openai:gpt-4o-mini,agent,1
+How many variants were identified in the gene BRCA1?,7,7,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What percentage of variants in BRCA2 were known before EXOMA?,26.7%,4/15 (26.7),0,,0,0,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+How many variants with pre-existing personal and/or family criteria for genetic analysis were identified in PALB2?,2,2/2,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+How many incidental variants were found in the gene MUTYH?,NA,INSUFFICIENT,0,,0,1,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What percentage of variants in CHEK2 were non-actionable?,28.6%,,0,Max turns (8) exceeded,1,0,Calculation,Compute,1,0,openai:gpt-4o-mini,agent,1
+Which farm has the highest number of cows?,Farm H,INSUFFICIENT,0,,0,1,Cell Selection,Lookup,0,1,openai:gpt-4o-mini,agent,1
+What is the average number of observations per farm?,10,19.85,0,,0,0,Calculation,Compute,1,2,openai:gpt-4o-mini,agent,1
+Which farm has the lowest number of cows?,Farm G,G,0,,0,0,Cell Selection,Lookup,0,2,openai:gpt-4o-mini,agent,1
+What is the total number of cows on all farms?,1513,INSUFFICIENT,0,,0,1,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the farm with the highest average At (days)?,Farm F,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,agent,1
+How many equations include the variable 'Age'?,14,14,1,,0,0,Cell Selection,Lookup,1,3,openai:gpt-4o-mini,agent,1
+"How many equations include the variable 'Blood pressure, Systolic'?",4,4,1,,0,0,Cell Selection,Lookup,1,3,openai:gpt-4o-mini,agent,1
+How many equations include the variable 'BMI'?,11,11,1,,0,0,Cell Selection,Lookup,1,3,openai:gpt-4o-mini,agent,1
+How many equations include the variable 'Fasting glucose'?,5,5,1,,0,0,Cell Selection,Lookup,1,3,openai:gpt-4o-mini,agent,1
+How many equations include the variable 'Height'?,3,3,1,,0,0,Cell Selection,Lookup,1,2,openai:gpt-4o-mini,agent,1
+What is the TG concentration characteristics for the LDLAnadaraja study?,TG concentration ranged 350 mg/dL,153 subjects whose TG 350 mg/dL were included.,0,,0,0,Cell Selection,Lookup,0,1,openai:gpt-4o-mini,agent,1
+What is the equation for LDL quantification in the LDLPuavilai study using the automated enzymatic method?,TC HDL - (TG / 6),TC HDL - (TG 6),1,,0,0,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+How many subjects had TG > 400 mg/dL in the LDLde Cordova study?,470 subjects,470 subjects,1,,0,0,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the equation for LDL quantification in the LDLChoi study using the automated enzymatic method?,TC 0.87 X HDL 0.13 TG,TC 0.87 X HDL 0.13 TG,1,,0,0,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the LDL concentration equation in the LDLHattori study?,(0.94 TC) (0.94 HDL) 0.19 TG,(0.94 TC) (0.94 HDL) 0.19 TG,1,,0,0,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the total number of females who used to smoke often?,2,,0,Max turns (8) exceeded,1,0,Calculation,Compute,1,0,openai:gpt-4o-mini,agent,1
+What percentage of males have a family history of PD?,11.76%,,0,Max turns (8) exceeded,1,0,Calculation,Compute,0,0,openai:gpt-4o-mini,agent,1
+What is the average MDS-UPDRS part III score for females with no exposure to pesticides?,26.21,,0,Max turns (8) exceeded,1,0,Calculation,Compute,1,0,openai:gpt-4o-mini,agent,1
+How many individuals with a Hoehn-Yahr stage of 2 have a family history of PD?,8,,0,Max turns (8) exceeded,1,0,Calculation,Compute,1,0,openai:gpt-4o-mini,agent,1
+What is the difference in average age of onset between those with and without a family history of PD?,1.83,,0,Max turns (8) exceeded,1,0,Calculation,Compute,0,0,openai:gpt-4o-mini,agent,1
+"What is the carcass chemical composition (CPcarc) when CPRs=20, EERS=15, and WRS=30?",CPcarc = 5.98 + 0.66(20) = 19.58,8.35,0,,0,0,Arithmetic,Compute,0,4,openai:gpt-4o-mini,agent,1
+What is the empty body chemical composition (CPEBW) when CPRs=25 and OV=10?,21.3,20.17,0,,0,0,Arithmetic,Compute,0,1,openai:gpt-4o-mini,agent,1
+What is the carcass chemical composition (Wcarc) when WRS=40 and EBW=50?,45.77,"Wcarc = -16.3, WEBW = 46.22",0,,0,0,Arithmetic,Compute,0,2,openai:gpt-4o-mini,agent,1
+"What is the empty body chemical composition (EEEBW) when EERS=18, VF=5, and OV=8?",9.91,The empty body chemical composition (EEEBW) is 34.398.,0,,0,0,Arithmetic,Compute,0,4,openai:gpt-4o-mini,agent,1
+"What is the empty body chemical composition (WEBW) when WRs=30, VF=4, and OV=12?",61.38,56.24,0,,0,0,Arithmetic,Compute,0,1,openai:gpt-4o-mini,agent,1
+How many subjects were studied in the LDLRao research?,196 sera,196 sera,1,,0,0,Counting,Compute,1,1,openai:gpt-4o-mini,agent,1
+What was the TG concentration range in the LDLcal study?,TG ranged 20-2502 mg/dL,TG ranged 20-2502 mg/dL.,1,,0,0,Fact Finding,Lookup,1,1,openai:gpt-4o-mini,agent,1
+Which study included 153 subjects with TG levels above 350 mg/dL?,LDLAnadara,LDLAnadaraja,1,,0,0,Identification,Lookup,1,1,openai:gpt-4o-mini,agent,1
+"In the LDLDeLong study, how many subjects had TG levels greater than 400 mg/dL?",964 subjects,964 subjects,1,,0,0,Counting,Compute,1,2,openai:gpt-4o-mini,agent,1
+What was the equation used for LDL quantification in the LDLVujovic study?,TC HDL (TG/ 6.58),TC HDL (TG/ 6.58),1,,0,0,Fact Finding,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the mean age of participants in the P/LP/R group?,46.50+/-7.43,46.50,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+How many females are in the Unidentified group?,24 (52.17),24,1,,0,0,Cell Selection,Lookup,1,4,openai:gpt-4o-mini,agent,1
+What percentage of participants in the Smoking group used to smoke?,8 (42.11),26.51%,0,,0,0,Cell Selection,Lookup,1,4,openai:gpt-4o-mini,agent,1
+How many participants have a family history of PD in the VUS group?,0,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,agent,1
+What is the mean MDS-UPDRS part III score for participants in the Unidentified group?,31.39+/-13.20,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,agent,1
+What is the equation for carcass protein content according to Hankins and Howe?,CPcarc = 5.98+0.66xCPRS,CPcarc = 5.98+0.66xCPRS,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the equation for carcass energy content according to Costa e Silva et al?,EEcarc = 4.54+0.48xEERs+0.12xOV,INSUFFICIENT,0,,0,1,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the equation for empty body protein content according to Costa e Silva et al?,CPEBW =19.92+0.086xCPRs-0.19xOV,INSUFFICIENT,0,,0,1,Cell Selection,Lookup,1,3,openai:gpt-4o-mini,agent,1
+What is the equation for empty body energy content according to Costa e Silva et al?,EEEBW = 3.53+0.34xEERS+0.80xVF+0.10xOV,CPEBW =19.92+0.086xCPRs-0.19xOV,0,,0,0,Cell Selection,Lookup,1,6,openai:gpt-4o-mini,agent,1
+What is the equation for whole empty body weight according to the table?,WEBW = 53.02+0.17xWRs-1.28xVF+0.27xOV,INSUFFICIENT,0,,0,1,Cell Selection,Lookup,1,3,openai:gpt-4o-mini,agent,1
+What is the total number of skewed markers for Group 3 in the One-step analysis?,5,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,agent,1
+What is the average marker distance for Group 5 in the Two-step analysis?,3.4,54.4,0,,0,0,Arithmetic,Compute,1,3,openai:gpt-4o-mini,agent,1
+What is the total number of loci for Group 8 in the One-step analysis?,14,18 loci,0,,0,0,Arithmetic,Compute,1,7,openai:gpt-4o-mini,agent,1
+What is the total size for all groups in the Two-step analysis?,608.4 cM,4.0 cM,0,,0,0,Arithmetic,Compute,0,3,openai:gpt-4o-mini,agent,1
+What is the average marker distance for Group 4 in the One-step analysis?,4.2,4.2,1,,0,0,Arithmetic,Compute,1,4,openai:gpt-4o-mini,agent,1
+What is the average age of Hispanic Case-Control AD Cases?,74.52,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,agent,1
+What percentage of Cognitively Normal Controls in EA Case-Control carry the APOE E4 gene?,14.4%,14.4%,1,,0,0,Arithmetic,Compute,1,4,openai:gpt-4o-mini,agent,1
+How many AD Cases were sampled in the CHARGE WES group?,612,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,agent,1
+What is the percentage of females in the ADES-FR WES Cognitively Normal Controls?,58%,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,agent,1
+How many ADGC GWAS Cognitively Normal Controls were sampled?,"5,096",,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,agent,1
+What percentage of patients in the Present Study have permanent weakness?,47%,46.67%,1,,0,0,Calculation,Compute,1,2,openai:gpt-4o-mini,agent,1
+What percentage of patients in Other Studies aged 30-50 have exercise intolerance?,89%,132.73%,0,,0,0,Calculation,Compute,1,4,openai:gpt-4o-mini,agent,1
+What is the difference in percentage of patients with a positive family history between Present Study and Other Studies?,28%,-20.54%,0,,0,0,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+What percentage of patients in the Present Study have CK elevation?,100%,100%,1,,0,0,Calculation,Compute,1,2,openai:gpt-4o-mini,agent,1
+What is the percentage of patients with Second wind in the Present Study?,56%,55.88%,1,,0,0,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the average marker distance for Group G3 in the one-step process?,3.5 cM,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,agent,1
+How many loci are there in Group G7 in the two-step process?,18 loci,28,0,,0,0,Cell Selection,Lookup,0,2,openai:gpt-4o-mini,agent,1
+Which group has the highest average marker distance in the one-step process?,G1,G3 69.4 (cM),0,,0,0,Comparison,Compute,1,5,openai:gpt-4o-mini,agent,1
+How many skewed markers are there in total for the two-step process?,28 skewed markers,28,1,,0,0,Calculation,Compute,0,8,openai:gpt-4o-mini,agent,1
+What is the average marker distance for all groups combined in the one-step process?,4.0 cM,,0,Max turns (8) exceeded,1,0,Calculation,Compute,0,0,openai:gpt-4o-mini,agent,1
+What is the average age of Hispanic Enriched AD Cases in the Discovery Sample table?,75.4,The average age of Hispanic Enriched AD Cases in the Discovery Sample table is 75.45.,1,,0,0,Cell Selection,Lookup,1,5,openai:gpt-4o-mini,agent,1
+What percentage of Cognitively Normal Controls in the Discovery Sample table carry the APOE E4 allele?,14.4%,14.4%,1,,0,0,Cell Selection,Lookup,1,4,openai:gpt-4o-mini,agent,1
+How many AD Cases were included in the CHARGE WES sample in the Discovery Sample table?,61,612,0,,0,0,Cell Selection,Lookup,1,5,openai:gpt-4o-mini,agent,1
+What is the percentage of females in the EA Case-Control group of the Discovery Sample table?,55.8%,59.2%,0,,0,0,Cell Selection,Lookup,1,4,openai:gpt-4o-mini,agent,1
+How many participants were in the ADGC GWAS sample in the Discovery Sample table?,"9,343",,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,agent,1
+What percentage of patients in the Present Study exhibited Exercise intolerance?,100%,100%,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What percentage of patients in the Other Studies exhibited Permanent weakness?,28%,27.71%,0,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What was the p-value for the comparison between Exercise intolerance in the Present Study and Other Studies?,n.s.,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,agent,1
+What was the age range with the highest percentage of patients at diagnosis in the Present Study?,30-50,"The age range with the highest percentage of patients at diagnosis in the Present Study was 30-50, with 32 (53%).",1,,0,0,Cell Selection,Lookup,1,3,openai:gpt-4o-mini,agent,1
+What percentage of patients in the Present Study had a Positive family history?,25%,25%,1,,0,0,Cell Selection,Lookup,1,2,openai:gpt-4o-mini,agent,1
+What is the total number of drugs classified as inhibitors in the table?,16,17,0,,0,0,Arithmetic,Compute,1,1,openai:gpt-4o-mini,agent,1
+How many drugs have a protective effect on immune-mediated diseases?,14,21,0,,0,0,Arithmetic,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the total number of drugs with a completed phase II or phase IV in the table?,11,7,0,,0,0,Arithmetic,Compute,1,1,openai:gpt-4o-mini,agent,1
+How many drugs have RA listed as a clinical indication?,3,3,1,,0,0,Arithmetic,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the total number of drugs that are agonists or antagonists in the table?,6,7,0,,0,0,Arithmetic,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the sum of the OMIM numbers for the first 3 entries in the table?,"937,285",937285,1,,0,0,Arithmetic,Compute,0,17,openai:gpt-4o-mini,agent,1
+What is the difference between the Location of entry 7 and the Location of entry 20?,4q35,'17q21.2' vs '16q22.1',0,,0,0,Arithmetic,Compute,1,2,openai:gpt-4o-mini,agent,1
+"If Gene KRT17 has OMIM number *148069, what is the OMIM number of Gene KRT6A?",148041,#615726,0,,0,0,Arithmetic,Compute,1,1,openai:gpt-4o-mini,agent,1
+"What is the sum of the OMIM numbers for entries 12, 13, and 14?","1,393,911",INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,7,openai:gpt-4o-mini,agent,1
+"If Phenotype is 'Pachyonychia congenita 3/PC3', what is the Location?",12q13.13,12q13.13,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+"What is the sum of values in cells NIAB15, OSG15, and ROTH15?",3,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,agent,1
+What is the difference between the values in cells NIAB16 and OSG16?,0,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,agent,1
+"What is the product of values in cells NIAB15, OSG16, and ROTH15?",0,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,agent,1
+"What is the average of values in cells QYr.niab-2A.1, QYr.niab-2A.2, and QYr.niab-2B.1?",1.33,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,agent,1
+"What is the ratio of values in cells QYr.niab-3A.I, QYr.niab-6A.1, and QYr.niab-6A.2?",Ratio = 2:2:1,0.5,0,,0,0,Arithmetic,Compute,0,14,openai:gpt-4o-mini,agent,1
+What is the total age of the individuals in months?,502 months,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,agent,1
+What is the average age in years and months?,7 years.,9.33 years,0,,0,0,Arithmetic,Compute,0,7,openai:gpt-4o-mini,agent,1
+What is the total duration of schooling in years and months?,13 years,51.17 years,0,,0,0,Arithmetic,Compute,0,1,openai:gpt-4o-mini,agent,1
+What is the total duration of schooling for males in months?,84 months.,312 months,0,,0,0,Arithmetic,Compute,0,1,openai:gpt-4o-mini,agent,1
+What is the difference in schooling duration between the youngest and oldest individuals in months?,72 months,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,agent,1
+What type of drug is abatacept and what is its application in immune-mediated diseases?,"CTLA4-mimicking, RA, JIA, UC, T1D, MS, psoriasis",INSUFFICIENT,0,,0,1,Cell Selection,Lookup,1,2,openai:gpt-4o-mini,agent,1
+What is the clinical indication for vedolizumad and in which diseases is it used?,"CD, UC and immune system disease","The clinical indications for vedolizumad are CD, UC and immune system disease, and coeliac disease.",1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the eQTL effect of adrilumab?,Predisposing,predisposing,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the drug that is a stabilizer for Gauchers disease?,Afegostat,afegostat,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+Which drug is an agonist for UC and has completed phase II trials?,Rivenprost,INSUFFICIENT,0,,0,1,Cell Selection,Lookup,1,2,openai:gpt-4o-mini,agent,1
+What is the OMIM number for White Sponge Nevus 1?,#193900,#193900,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+Where is the gene KRT17 located?,17q21.2,17q21.2,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the OMIM number for Pachyonychia congenita 2/PC2?,#167210,#167210,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+Which autosomal recessive DKC has the OMIM number 613987?,"DKC, autosomal recessive 2/DKCB2",NHP2,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the gene associated with Revesz syndrome?,RTEL1,INSUFFICIENT,0,,0,1,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What environments are associated with QYr.niab-2A.2?,1-2 1-2,"1-2 1-2, 1-2 1-2, 1-2 1, 1-2 1-2, 1 1",1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What chromosome is QYr.niab-4B.1 located on?,4B,4B,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+Which environments are associated with QYr.niab-6A.1?,2-4 2-4,"OSG15, ROTH15, NIAB16, OSG16",0,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What chromosome is QYr.niab-3D.I located on?,3D,3D,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+Which environments are associated with QYr.niab-5A.1?,"1,2,4 1,2,4","OSG15, ROTH15, NIAB16, OSG16",0,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the age of the student at row 2?,9 months,INSUFFICIENT,0,,0,1,Cell Selection,Lookup,0,1,openai:gpt-4o-mini,agent,1
+What is the most recent level of education completed by the student at row 6?,Dropped out at Grade 6 in primary school,3 mon,0,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+Is the student at row 4 currently attending school?,Not go to school,Not go to school,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the sex of the student at row 6?,F,M,0,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+How long has the student at row 1 been above average?,All the time,1 mon,0,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the difference between σ2A and p̄(Aα = µα - 2σAα )c for the second row?,0.038 - 0.006 = 0.032,0.032,0,,0,0,Arithmetic,Compute,0,7,openai:gpt-4o-mini,agent,1
+"What is the sum of h2o, h2u, and σ2A in the first row?",0.05 + 0.0036 + 0.012 = 0.0656,0.0656,0,,0,0,Arithmetic,Compute,0,5,openai:gpt-4o-mini,agent,1
+What is the product of h2u and Accuracy for the third row?,0.0429 * 0.241 = 0.0103389,0.0103389,0,,0,0,Arithmetic,Compute,0,6,openai:gpt-4o-mini,agent,1
+What is the average of p̄(Aα = µα + 2σAα )c and LMMd for the first two rows?,(0.015 + 0.173 + 0.012 + 0.195) / 4 = 0.09875,0.09875,0,,0,0,Arithmetic,Compute,0,3,openai:gpt-4o-mini,agent,1
+What is the ratio of σ2A to p̄(Aα = µα + 2σAα )c for the third row?,0.170 / 0.022 = 7.727272727,7.727272727272728,0,,0,0,Arithmetic,Compute,0,3,openai:gpt-4o-mini,agent,1
+"What is the sum of α1 values for genes IL16, HOMERI, and ALG6?",2.89,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,agent,1
+"What is the product of β2 values for genes CBRI, TNFRSFIIA, and TGIF?",9.386685,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,agent,1
+"What is the average of θ values for genes DDX17, PSPHL, and IL16?",0.453,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,agent,1
+What is the difference between α2 values for genes DSCR2 and TGIF?,0.39,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,agent,1
+What is the ratio of β1 values for genes CHI3L2 and DDX17?,1.70833,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,agent,1
+"What is the sum of Peptide Length for Tm-AMP-D1.2, Sd2, and Sialpha2?",144,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,agent,1
+"What is the difference between the Net Charge at pH 7 for Tk-AMP-D6, ZmES1, and Sd4?",Irrelevant question,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,agent,1
+"What is the product of Isoelectric Point for Tk-AMP-D1, OsDEF8, and γ-Hordothionin?",731.5307,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,agent,1
+"What is the average Peptide Length for Tk-AMP-D5, ZmES1, and Sd3?",52.67,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,agent,1
+What is the ratio of γ-Core Charge for Tk-AMP-D4 to Tk-AMP-D6.1?,1,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,agent,1
+What is the sum of coefficients for βPLAND in the time period 2002-2010?,Irrelevant question,0.0,0,,0,0,Arithmetic,Compute,0,3,openai:gpt-4o-mini,agent,1
+What is the difference between the coefficients for βEG in the time periods 2006-2010 and 2002-2010?,0.188 - (-0.112) = 0.3,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,agent,1
+What is the total ΔAIC for the time period 2002-2010?,0 + 1 + 2 + 2 + 2 = 7,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,agent,1
+What is the average Z-value for all coefficients in the table?,(-2.634 - 1.125 - 0.734 - 2.595 - 1.266 + 2.806 + 2.132 + 0.792 + 2.249 + 1.789 + 0.539 - 1.185 - 0.883 - 0.776 - 1.354) / 15 = -0.150,-1.6708,0,,0,0,Arithmetic,Compute,0,1,openai:gpt-4o-mini,agent,1
+What is the total wAIC for the time period 2006-2010?,0.65 + 0.12 + 0.02 + 0.15 + 0.06 = 1,6,0,,0,0,Arithmetic,Compute,0,6,openai:gpt-4o-mini,agent,1
+What is the difference in -2LL between Cholesky ACE and Comm.P 1 Factor models?,Irrelevant question,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,agent,1
+What is the AIC value for Cholesky ACE 3 Factor model?,20345.11,20345.11,1,,0,0,Arithmetic,Compute,1,2,openai:gpt-4o-mini,agent,1
+How many parameters are there in the Comm.P_1 Factor model?,49,,0,Max turns (8) exceeded,1,0,Counting,Compute,1,0,openai:gpt-4o-mini,agent,1
+What is the BIC value for Cholesky ACE 1 Factor model?,-403393.08,INSUFFICIENT,0,,0,1,Arithmetic,Compute,1,2,openai:gpt-4o-mini,agent,1
+What is the p-value for the comparison between Comm.P_3 Factor and Comm.P_2 Factor models?,Irrelevant question,,0,Max turns (8) exceeded,1,0,Lookup,Lookup,0,0,openai:gpt-4o-mini,agent,1
+What is the value of σ2A when h2o is 0.1?,0.038,0.038,1,,0,0,Cell Selection,Lookup,1,3,openai:gpt-4o-mini,agent,1
+What is the value of p̄(Aα = µα - 2σAα )c when h2o is 0.05?,0.008,0.008,1,,0,0,Cell Selection,Lookup,1,7,openai:gpt-4o-mini,agent,1
+What is the accuracy value when h2o is 0.2?,0.241,0.241,1,,0,0,Cell Selection,Lookup,1,3,openai:gpt-4o-mini,agent,1
+What is the value of h2u when Accuracy is 0.195?,0.0111,0.0111,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the value of LMMd when σ2A is 0.170?,0.241,INSUFFICIENT,0,,0,1,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+Which gene has the highest value of α2?,PSPHL,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,agent,1
+What is the value of β1 for the gene IL16?,0.90,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,agent,1
+Which gene has the lowest value of θ?,PSPHL,PSPHL,1,,0,0,Cell Selection,Lookup,1,7,openai:gpt-4o-mini,agent,1
+What is the value of α1 for the gene TGIF?,0.70,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,agent,1
+Which gene has a value of β2 closest to 2.00?,ILI6 and CBRI,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,agent,1
+What is the Peptide Length of Tm-AMP-D1.2?,49,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,agent,1
+What is the Net Charge at pH 7 of Tk-AMP-D6?,+2,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,agent,1
+What is the Accession Number of OsDEF7?,BAF09407.1,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,agent,1
+What is the Isoelectric Point of Sialpha3?,8.97,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,agent,1
+What is the Prediction of Antimicrobial Activity for La-D4?,AMP,AMP,1,,0,0,Cell Selection,Lookup,1,6,openai:gpt-4o-mini,agent,1
+What is the coefficient value for βPLAND in the time period 2002-2006?,-0.045,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,agent,1
+What is the Z-value for BDMFL in the time period 2006-2010?,2.249,2.249,1,,0,0,Cell Selection,Lookup,1,5,openai:gpt-4o-mini,agent,1
+What is the AIC value for the model in the time period 2006-2010?,Irrelevant question,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,agent,1
+What is the ρ value for the model in the time period 2002-2010?,Irrelevant question,INSUFFICIENT,0,,0,1,Cell Selection,Lookup,0,4,openai:gpt-4o-mini,agent,1
+What is the ΔAIC value for the model in the time period 2002-2010?,Irrelevant question,12,0,,0,0,Cell Selection,Lookup,0,6,openai:gpt-4o-mini,agent,1
+What is the -2LL value for Model 1 (Cholesky ACE)?,140275.80,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,agent,1
+How many parameters are there in Model 2 (Cholesky ACE Comm.P 1 Factor)?,43,43,1,,0,0,Cell Selection,Lookup,1,2,openai:gpt-4o-mini,agent,1
+What is the AIC value for Model 4 (Cholesky ACE Comm.P 3 Factor)?,20345.11,20345.11,1,,0,0,Cell Selection,Lookup,1,5,openai:gpt-4o-mini,agent,1
+Which models have a p-value less than 0.05?,"Models 2, 3, 4, 5, and 6","5. Comm.P_1 Factor, Comm.P_2 Factor",0,,0,0,Pattern Identification,Lookup,0,1,openai:gpt-4o-mini,agent,1
+What is the BIC value for Model 5 (Comm.P_1 Factor Comm.P_2 Factor)?,-405704.02,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,agent,1
+"What is the sum of the Heritability of shape values for entries 2, 4, and 6?",0.42 + 0.26 + 0.39 = 1.07,0.82,0,,0,0,Arithmetic,Compute,0,14,openai:gpt-4o-mini,agent,1
+"What is the product of the Genetic correlation values for entries 3, 5, and 9?",0.11 * -0.06 * -0.19 = 0.001254,0.001254,0,,0,0,Arithmetic,Compute,0,4,openai:gpt-4o-mini,agent,1
+"What is the difference between the Phenotypic correlation values for entries 1, 5, and 8?",-0.50 - 0.06 - 0.09 = -0.65,-0.65,0,,0,0,Arithmetic,Compute,0,7,openai:gpt-4o-mini,agent,1
+"What is the average of the Heritability of centroid values for entries 2, 7, and 10?",(0.22 + 0.21 + 0.23) / 3 = 0.22,0.25,0,,0,0,Arithmetic,Compute,0,11,openai:gpt-4o-mini,agent,1
+"What is the sum of the Genetic correlation values for entries 4, 6, and 8?",0.10 + 0.11 + 0.23 = 0.44,0.44,0,,0,0,Arithmetic,Compute,0,4,openai:gpt-4o-mini,agent,1
+"What is the total number of Unique Publications for GPX1, GPX2, and GPX3?",5,8 Unique Publications,0,,0,0,Arithmetic,Compute,1,8,openai:gpt-4o-mini,agent,1
+What is the percentage of Throughput for NOS2 out of the Total Interactions?,Irrelevant question,100.0%,0,,0,0,Arithmetic,Compute,0,4,openai:gpt-4o-mini,agent,1
+What is the total number of Throughput for PRDX1 and PRDX2?,Irrelevant question,178,0,,0,0,Arithmetic,Compute,0,6,openai:gpt-4o-mini,agent,1
+What is the percentage of Low for SOD1 out of the Total Interactions?,76%,76.31%,1,,0,0,Arithmetic,Compute,1,5,openai:gpt-4o-mini,agent,1
+What is the ratio of High to Low for PRDX3?,33:12 or 2.75,0.0,0,,0,0,Arithmetic,Compute,0,8,openai:gpt-4o-mini,agent,1
+What is the average total cholesterol for women and men combined?,184.16 mg/dL,184.16 mg/dL,1,,0,0,Arithmetic,Compute,0,3,openai:gpt-4o-mini,agent,1
+What percentage of women have a family history of ASCVD?,3.64%,3.64%,1,,0,0,Arithmetic,Compute,1,5,openai:gpt-4o-mini,agent,1
+What is the difference in average waist circumference between women and men?,2.69 cm,-2.69 cm,1,,0,0,Arithmetic,Compute,0,1,openai:gpt-4o-mini,agent,1
+What is the total number of ASCVD events within 5 years for both women and men?,286 events,149137,0,,0,0,Arithmetic,Compute,0,1,openai:gpt-4o-mini,agent,1
+What is the difference in mean SBP between women and men?,3.05 mmHg,3.05 mmHg,1,,0,0,Arithmetic,Compute,0,1,openai:gpt-4o-mini,agent,1
+What is the possible function of UMOD in renal aging?,UMOD influences NaCl reabsorption; overexpression leads to salt-sensitive hypertension. Overexpression also causes age-dependent lesions; tubular casts and tubular dilatation.,UMOD influences NaCl reabsorption; overexpression leads to salt-sensitive hypertension. Overexpression also causes age-dependent lesions; tubular casts and tubular dilatation.,1,,0,0,Cell Selection,Lookup,1,7,openai:gpt-4o-mini,agent,1
+How does SHROOM3 defect impact renal function?,A defect in the actin-binding domain of SHROOM3 results in impairment of the glomerular filtration barrier leading to albuminuria and glomerulosclerosis. Increased SHROOM3 expression is associated with fibrosis.,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,agent,1
+What are the consequences of Far2 overexpression?,Overexpression of Far2 leads to upregulation of PAF and TGFβ; profibrotic factors.,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,agent,1
+What is the role of Wisp2 in tertiary lymphoid organs?,Wisp2 is part of the Wnt signaling pathway and linked to aging-related inflammation.,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,agent,1
+What functions are associated with Esrrg in glomerular lipoprotein deposits?,"Esrrg influences lipid metabolism, is involved in cardiovascular disease, and associated with altered blood pressure. The exact mechanism is unknown.",,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,agent,1
+What is the range of values for CWT (kg) in the dataset?,Range: 430 kg,The range of values for CWT (kg) in the dataset is 220.00 - 650.00.,0,,0,0,Calculation,Compute,0,1,openai:gpt-4o-mini,agent,1
+What is the coefficient of variation (CV) for EMA (cm2)?,CV: 12.06%,12.06,1,,0,0,Calculation,Compute,0,1,openai:gpt-4o-mini,agent,1
+What is the average BFT (mm) for the dataset?,Mean: 12.80 mm,12.80 mm,1,,0,0,Calculation,Compute,0,1,openai:gpt-4o-mini,agent,1
+What is the standard deviation (SD) for MS (1-9)?,SD: 1.88,1.88,1,,0,0,Calculation,Compute,0,1,openai:gpt-4o-mini,agent,1
+What is the total number of observations (N) in the dataset?,N: 6092,6092,1,,0,0,Cell Selection,Lookup,0,1,openai:gpt-4o-mini,agent,1
+What is the heritability of shape for individual 3?,0.14 (0.05,0.14 (0.05),1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the genetic correlation for individual 8?,0.23 (0.21),0.23 (0.21),1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the phenotypic correlation for individual 5?,0.06 (0.02),0.06 (0.02),1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the heritability of centroid for individual 10?,0.23 (0.06),0.23 (0.06),1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the summarized shape for individual 2?,Irrelevant question,2,0,,0,0,Cell Selection,Lookup,0,1,openai:gpt-4o-mini,agent,1
+Which gene has the highest percentage of 'High' in the Unknown_1 column?,"GPX2, GPX4, GPX6, GPX7, PRDX5, and SRXN1",,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,agent,1
+How many publications are associated with GPX1?,3,3,1,,0,0,Counting,Compute,1,3,openai:gpt-4o-mini,agent,1
+What is the total number of interactions for NOS2?,175,175,1,,0,0,Summation,Compute,1,2,openai:gpt-4o-mini,agent,1
+Which gene has a 100% percentage in both 'High' and 'Low' categories?,None,INSUFFICIENT,0,,0,1,Cell Selection,Lookup,0,2,openai:gpt-4o-mini,agent,1
+What is the total number of unique interactions in the table?,644,INSUFFICIENT,0,,0,1,Summation,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the average age of women in the study?,52.10 years,52.1 y,1,,0,0,Cell Selection,Lookup,0,1,openai:gpt-4o-mini,agent,1
+What is the mean waist circumference for men?,86.95 cm,86.95 (10.15),1,,0,0,Cell Selection,Lookup,0,1,openai:gpt-4o-mini,agent,1
+What percentage of women have a family history of ASCVD?,67%,3.64%,0,,0,0,Cell Selection,Lookup,1,3,openai:gpt-4o-mini,agent,1
+How many women in the study are current smokers?,238,238,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the 5-year Kaplan-Meier ASCVD rate for men?,9.1%,9.1,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the possible function of Cubilin in renal aging?,Cubilin functions as an endocytic receptor of albumin.,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,agent,1
+Which gene is associated with salt-sensitive hypertension?,UMOD,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,agent,1
+What is the result of a defect in the actin-binding domain of SHROOM3?,Impairment of the glomerular filtration barrier leading to albuminuria and glomerulosclerosis.,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,agent,1
+What is the effect of Far2 overexpression on the mesangial matrix?,Leads to upregulationof PAF and TGFB; profibrotic factors,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,agent,1
+Which gene is part of the Wnt signaling pathway and linked to aging-related inflammation?,Wisp2,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,agent,1
+What is the maximum CWT (kg) recorded?,650.00,650.00,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the mean EMA (cm2) value?,93.75,93.75,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the standard deviation (SD) for BFT (mm)?,4.73,4.73,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the minimum value for MS (1-9)?,1,1,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the coefficient of variation (CV) for CWT (kg)?,10.79,10.79,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+"What is the total number of mutations for p.Arg1205His, p.Arg1374His, and p.Arg1306Trp?",76,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,agent,1
+What percentage of type 3 families have mutations for p.Arg1374Cys?,Irrelevant question,,0,Max turns (8) exceeded,1,0,Percentage Calculation,Compute,0,0,openai:gpt-4o-mini,agent,1
+How many mutations are there for p.Tyr1584Cys and p.Arg763Ser combined?,10,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,agent,1
+What is the total number of mutations for p.Leu1733Pro and p.Arg1597Trp?,20,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,agent,1
+What percentage of type 2A families have mutations for p.Arg816Trp?,Irrelevant question,,0,Max turns (8) exceeded,1,0,Percentage Calculation,Compute,0,0,openai:gpt-4o-mini,agent,1
+What percentage of patients have CD with inflammatory behavior?,66%,,0,Max turns (8) exceeded,1,0,Calculation,Compute,1,0,openai:gpt-4o-mini,agent,1
+What percentage of CD patients have ileocolonic distribution?,59%,59%,1,,0,0,Calculation,Compute,1,7,openai:gpt-4o-mini,agent,1
+What percentage of UC/IBDU patients have extensive/total colitis disease extent?,57%,,0,Max turns (8) exceeded,1,0,Calculation,Compute,1,0,openai:gpt-4o-mini,agent,1
+What percentage of patients are receiving immunomodulators as treatment?,89%,47%,0,,0,0,Calculation,Compute,1,4,openai:gpt-4o-mini,agent,1
+What percentage of CD patients have perianal behavior?,21%,21.25%,0,,0,0,Calculation,Compute,1,6,openai:gpt-4o-mini,agent,1
+"What is the total number of females with Benign Lesions, Atypical Adenoma, and Carcinoma combined?",202,202,1,,0,0,Arithmetic,Compute,0,4,openai:gpt-4o-mini,agent,1
+What percentage of individuals with Bone Involvement in the Benign Lesions group is asymptomatic for PHPT?,12.52%,85.48%,0,,0,0,Percentage Calculation,Compute,0,3,openai:gpt-4o-mini,agent,1
+What is the average Serum total calcium level across all three groups?,3.08 mmol/L,3.08 mmol/L,1,,0,0,Arithmetic,Compute,0,1,openai:gpt-4o-mini,agent,1
+What is the difference in Serum iPTH levels between Atypical Adenoma and Carcinoma groups?,535.4 pg/ml,-535.4 pg/ml,1,,0,0,Arithmetic,Compute,0,5,openai:gpt-4o-mini,agent,1
+What percentage of individuals with Typical changes in X-rays in the Carcinoma group also have Urolithiasis/Renal Calcification?,32.90%,70.37%,0,,0,0,Percentage Calculation,Compute,0,6,openai:gpt-4o-mini,agent,1
+What is the total weight of the baby at 4 months and 13 days in table-1?,6kg,3.0 kg,0,,0,0,Arithmetic Calculation,Compute,1,4,openai:gpt-4o-mini,agent,1
+What is the difference in head circumference between the baby at 5 months 15 days and 4 months 20 days in table-1?,2.5cm,,0,Max turns (8) exceeded,1,0,Arithmetic Calculation,Compute,0,0,openai:gpt-4o-mini,agent,1
+What is the total weight of the baby at 6 months and 5 days in table-1?,8kg,INSUFFICIENT,0,,0,1,Arithmetic Calculation,Compute,1,4,openai:gpt-4o-mini,agent,1
+What is the total weight of the baby at 4 months 10 days in table-1?,Irrelevant question,3.85 kg,0,,0,0,Arithmetic Calculation,Compute,0,1,openai:gpt-4o-mini,agent,1
+What is the difference in fontanelle size between the baby at 4 months 9 days and 5 months 15 days in table-1?,1 x 0.5 cm,-1.0 cm,1,,0,0,Arithmetic Calculation,Compute,0,3,openai:gpt-4o-mini,agent,1
+What is the total number of yellow seeds in the F2 generation?,106,106,1,,0,0,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the segregation ratio of white seeds in the F2:3 generation?,3:1 (0.77:0.23),3:1 (0.78:0.22),1,,0,0,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the expected segregation ratio of yellow seeds in the BC1P2 generation?,1:1 (0.39:0.61),1:1 (0.39:0.61),1,,0,0,Information Retrieval,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the X^2 value for the F2 generation segregation ratio?,0.199,0.199,1,,0,0,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the p-value for the segregation ratio of yellow seeds in the F2:3 generation?,0.699,The p-value for the segregation ratio of yellow seeds in the F2:3 generation is '0.699'.,0,,0,0,Information Retrieval,Lookup,1,4,openai:gpt-4o-mini,agent,1
+"What is the total number of mutations for p.Arg1205His, p.Arg1374His, and p.Arg1306Trp?",76,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,agent,1
+What percentage of type 3 families have mutations for p.Arg1374Cys?,Irrelevant question,INSUFFICIENT,0,,0,1,Percentage Calculation,Compute,0,6,openai:gpt-4o-mini,agent,1
+How many mutations are there for p.Tyr1584Cys and p.Arg763Ser combined?,10,"Thus, the answer is 12.",0,,0,0,Arithmetic,Compute,1,6,openai:gpt-4o-mini,agent,1
+What is the total number of mutations for p.Leu1733Pro and p.Arg1597Trp?,20,210,0,,0,0,Arithmetic,Compute,1,7,openai:gpt-4o-mini,agent,1
+What percentage of type 2A families have mutations for p.Arg816Trp?,Irrelevant question,,0,Max turns (8) exceeded,1,0,Percentage Calculation,Compute,0,0,openai:gpt-4o-mini,agent,1
+What percentage of patients have a diagnosis of UC?,25%,327.34%,0,,0,0,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+How many patients have a CD diagnosis with stricturing behavior?,12,,0,Max turns (8) exceeded,1,0,Counting,Compute,1,0,openai:gpt-4o-mini,agent,1
+What percentage of CD patients have upper gastrointestinal involvement?,68%,,0,Max turns (8) exceeded,1,0,Calculation,Compute,1,0,openai:gpt-4o-mini,agent,1
+How many patients have UC/IBDU disease extent of Proctitis?,5,5 (17),1,,0,0,Counting,Compute,1,4,openai:gpt-4o-mini,agent,1
+What percentage of patients are receiving Biologic therapy?,58%,58%,1,,0,0,Calculation,Compute,1,7,openai:gpt-4o-mini,agent,1
+What is the average onset age for patients with Benign Lesions?,52.0 years,33.15,0,,0,0,Calculation,Compute,0,3,openai:gpt-4o-mini,agent,1
+What percentage of females have Carcinoma?,39.2%,39.2%,1,,0,0,Calculation,Compute,1,4,openai:gpt-4o-mini,agent,1
+Which condition has the highest P1 value?,Bone Involvement,,0,Max turns (8) exceeded,1,0,Identification,Lookup,1,0,openai:gpt-4o-mini,agent,1
+What is the range of Serum iPTH values for patients with Atypical Adenoma?,216.4-1149.0 pg/ml,216.4~1149.0,1,,0,0,Calculation,Compute,0,1,openai:gpt-4o-mini,agent,1
+Which type of BMD has the lowest P value for comparison?,FN BMD (Z-score),FN BMD (Z-score),1,,0,0,Identification,Lookup,1,3,openai:gpt-4o-mini,agent,1
+What was the birth weight of the patient in row 3?,3.9 kg,3.9 kg,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What type of seizures did the patient in row 4 experience?,Focal seizures,Focal seizures,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What was the age of onset for the patient in row 5?,4 months 10 days,4 months 10 days,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What medication was prescribed for the patient in row 6?,"LEV, vitamin B6 tablets OXC","LEV, vitamin B6 tablets OXC",1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+Was there any abnormality in the head MRI of the patient in row 2?,Yes,Yes,1,,0,0,Cell Selection,Lookup,0,1,openai:gpt-4o-mini,agent,1
+What is the total number of yellow individuals in the population?,217,217,1,,0,0,Simple Calculation,Compute,0,2,openai:gpt-4o-mini,agent,1
+What is the expected segregation ratio for F2:3?,3:1 (0.78:0.22),3:1 (0.78:0.22),1,,0,0,Direct Reading,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the X^2 value for BC1P2?,0.988,0.988,1,,0,0,Direct Reading,Lookup,1,1,openai:gpt-4o-mini,agent,1
+How many white individuals are observed in F2?,31,31,1,,0,0,Simple Reading,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the p-value for F2:3?,0.699,0.699,1,,0,0,Direct Reading,Lookup,1,5,openai:gpt-4o-mini,agent,1
+What is the correlation between RL and RT?,0.222**,0.222**,1,,0,0,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the correlation between RW and SW?,0.855**,0.855*,1,,0,0,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the correlation between RL and SW?,0.464**,0.464*,1,,0,0,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the correlation between RW and RT?,0.221**,0.221**,1,,0,0,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the correlation between RL and R/S?,0.156*,0.156*,1,,0,0,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the total number of drugs classified as inhibitors in the table?,18,17,0,,0,0,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+How many drugs have completed phase II trials and are classified as predisposing?,2,2,1,,0,0,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the total number of drugs that are inhibitors and have a protective eQTL effect?,12,11,0,,0,0,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+How many drugs are agonists and have a terminated phase II trial?,1,0,0,,0,0,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the total number of drugs that are antagonists and have a protective eQTL effect?,5,4,0,,0,0,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the actual ratio for the cross PSs _ Ps (F2) in the table?,0.9:3,0.9:3,1,,0,0,Calculation,Compute,1,3,openai:gpt-4o-mini,agent,1
+What is the expected ratio for the cross PSs _ Ps (F2) in the table?,1:3,1:3,1,,0,0,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the p-Value for the cross F2:3 in the table?,0.935,0.935,1,,0,0,Calculation,Compute,1,3,openai:gpt-4o-mini,agent,1
+What is the total number of observations for the cross F2:3 in the table?,134,INSUFFICIENT,0,,0,1,Calculation,Compute,1,3,openai:gpt-4o-mini,agent,1
+What is the ratio 1.04:2:0.96 represent for the cross F2:3 in the table?,Actual Ratio,The ratio 1.04:2:0.96 represents for the cross F2:3 in the table is '32'.,0,,0,0,Calculation,Compute,1,3,openai:gpt-4o-mini,agent,1
+"What is the sum of values in cells QYr.niab-2A.1, QYr.niab-2B.1, and QYr.niab-2D.1?",Irrelevant question,414,0,,0,0,Arithmetic,Compute,0,16,openai:gpt-4o-mini,agent,1
+"What is the average of values in cells QYr.niab-4B.1, QYr.niab-4D.I, and QYr.niab-5A.1?",Irrelevant question,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,12,openai:gpt-4o-mini,agent,1
+What is the difference between the values in cells QYr.niab-6A.1 and QYr.niab-6A.2?,Irrelevant question,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,11,openai:gpt-4o-mini,agent,1
+"What is the product of values in cells QYr.niab-3A.I, QYr.niab-6A.1, and QYr.niab-6B.1?",Irrelevant question,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,agent,1
+"What is the sum of values in cells QYr.niab-3D.I, QYr.niab-4B.1, and QYr.niab-5A.1?",Irrelevant question,2 2,0,,0,0,Arithmetic,Compute,0,5,openai:gpt-4o-mini,agent,1
+What is the correlation between RL and RW?,0.514**,0.514**,1,,0,0,Correlation Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the correlation between SW and RT?,0.145*,0.145*,1,,0,0,Correlation Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the correlation between RL and SW?,0.464**,0.464*,1,,0,0,Correlation Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the correlation between RW and RT?,0.221**,0.221**,1,,0,0,Correlation Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the correlation between SW and R/S?,-0.161**,-0.161**,1,,0,0,Correlation Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the clinical indication for dasatinib?,cancer,cancer,1,,0,0,Cell Selection,Lookup,1,2,openai:gpt-4o-mini,agent,1
+What is the application of abatacept in immune-mediated diseases?,Phase I-IV,phase IV,0,,0,0,Cell Selection,Lookup,0,3,openai:gpt-4o-mini,agent,1
+What phase is vedolizumab in for coeliac disease?,phase II terminated,INSUFFICIENT,0,,0,1,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What type of drug is firategrast?,antagonist,antagonist,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the eQTL effect of adrilumab?,predisposing,predisposing,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the actual ratio for PSs _ Ps in the F2 generation?,0.9:3,0.9:3,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the p-Value for the F2:3 generation?,0.935,INSUFFICIENT,0,,0,1,Cell Selection,Lookup,1,3,openai:gpt-4o-mini,agent,1
+How many plants were observed in the F2 generation for PSs _ Ps?,156,36,0,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the expected ratio for the F2:3 generation?,1:2:1,1:2:1,1,,0,0,Cell Selection,Lookup,1,3,openai:gpt-4o-mini,agent,1
+How many families were observed in the Ps generation?,20,36,0,,0,0,Cell Selection,Lookup,1,5,openai:gpt-4o-mini,agent,1
+What environments are associated with the QTL NIAB15 on chromosome 1A?,1-4,1-4 1-4,1,,0,0,Cell Selection,Lookup,1,3,openai:gpt-4o-mini,agent,1
+Which QTLs are associated with environments S1 S2 on chromosome 2A?,"QYr.niab-2A.1, QYr.niab-2A.2",INSUFFICIENT,0,,0,1,Cell Selection,Lookup,0,3,openai:gpt-4o-mini,agent,1
+What is the range of environments associated with QTL NIAB16 on chromosome 6A?,1-4,1-4 1-4,1,,0,0,Cell Selection,Lookup,1,3,openai:gpt-4o-mini,agent,1
+Which QTLs are associated with environment 1-2 on chromosome 2B?,Irrelevant question,INSUFFICIENT,0,,0,1,Cell Selection,Lookup,0,1,openai:gpt-4o-mini,agent,1
+What is the environment associated with QTL NIAB15 on chromosome 3D?,"2, 2",2 2,1,,0,0,Cell Selection,Lookup,1,3,openai:gpt-4o-mini,agent,1
+"What is the total sum of N, HE, and FIS for rows 3, 7, and 11?","N: 24, HE: 1.678, FIS: 0.01",INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,4,openai:gpt-4o-mini,agent,1
+"What is the average value of AR for rows 2, 6, and 10?",Average AR: 2.804,2.804,1,,0,0,Arithmetic,Compute,0,4,openai:gpt-4o-mini,agent,1
+What is the difference between HO values for rows 13 and 17?,Difference in HO: 0.313,0.006,0,,0,0,Arithmetic,Compute,0,3,openai:gpt-4o-mini,agent,1
+"What is the product of N and NA for rows 4, 8, and 12?",23346015,1065,0,,0,0,Arithmetic,Compute,0,13,openai:gpt-4o-mini,agent,1
+"What is the ratio of HE to AR for rows 1, 5, and 9?",Ratio of HE to AR: 0.21,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,11,openai:gpt-4o-mini,agent,1
+What is the actual ratio of PSs to Ps in the F2 generation?,0.9:3,0.9:3,1,,0,0,Arithmetic,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the expected ratio of PSs to Ps in the F2 generation?,1:3,1:3,1,,0,0,Arithmetic,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the p-Value for the F2 generation?,0.579,0.579,1,,0,0,Arithmetic,Compute,1,3,openai:gpt-4o-mini,agent,1
+What is the ratio of Ps to F2:3 in the F2 generation?,Irrelevant question,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,4,openai:gpt-4o-mini,agent,1
+What is the p-Value for the F2:3 generation?,0.935,0.935,1,,0,0,Arithmetic,Compute,1,3,openai:gpt-4o-mini,agent,1
+What is the difference between the mean value of Parametera and the 95% upper limit value?,Irrelevant question,10.76,0,,0,0,Arithmetic,Compute,0,8,openai:gpt-4o-mini,agent,1
+What is the sum of the standard deviations of YW and FLM?,Irrelevant question,5.5368,0,,0,0,Arithmetic,Compute,0,6,openai:gpt-4o-mini,agent,1
+What is the product of the Z-Geweke value and the ESS value for YW?,Irrelevant question,1313.21149,0,,0,0,Arithmetic,Compute,0,9,openai:gpt-4o-mini,agent,1
+What is the ratio of h2 (FLM) to σ2e(FLM)?,Irrelevant question,0.1842,0,,0,0,Arithmetic,Compute,0,5,openai:gpt-4o-mini,agent,1
+What is the difference between the mode value of Parametera and the median value?,Irrelevant question,The difference between the mode value of Parametera and the median value is -0.5.,0,,0,0,Arithmetic,Compute,0,8,openai:gpt-4o-mini,agent,1
+What is the highest value in the 'N' column?,49,9,0,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the average value in the 'HE' column?,0.512,0.5692,0,,0,0,Calculation,Compute,0,3,openai:gpt-4o-mini,agent,1
+Which row has the highest 'FIS' value?,1,1,1,,0,0,Cell Selection,Lookup,1,2,openai:gpt-4o-mini,agent,1
+What is the sum of values in the 'NA' column?,611,38493741442921292931303329192518324037,0,,0,0,Calculation,Compute,0,1,openai:gpt-4o-mini,agent,1
+Which row has the lowest 'AR' value?,29,29,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the actual ratio observed for PSs _ Ps in generation F2?,0.9:3,0.9:3,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the p-Value for the ratio in generation F2:3?,0.935,0.935,1,,0,0,Cell Selection,Lookup,1,3,openai:gpt-4o-mini,agent,1
+How many plants were observed in generation F2:3?,134,35,0,,0,0,Counting,Compute,1,3,openai:gpt-4o-mini,agent,1
+What is the expected ratio for the cross PSs _ Ps in generation F2?,1:3,1:3,1,,0,0,Cell Selection,Lookup,1,3,openai:gpt-4o-mini,agent,1
+What is the ratio observed for F2:3 generation in the Unknown_5 column?,Irrelevant question,35,0,,0,0,Cell Selection,Lookup,0,3,openai:gpt-4o-mini,agent,1
+What is the mean value for Parametera?,Irrelevant question,341.64,0,,0,0,Simple,Lookup,0,3,openai:gpt-4o-mini,agent,1
+"What is the lower 95% confidence interval for σ(YW,FLM)?",-4.6750,-4.6750,1,,0,0,Simple,Lookup,1,3,openai:gpt-4o-mini,agent,1
+What is the standard deviation for σ2e(FLM)?,0.0037,0.0037,1,,0,0,Simple,Lookup,1,3,openai:gpt-4o-mini,agent,1
+What is the Z-Geweke value for h2 (YW)?,0.6027,0.6027,1,,0,0,Simple,Lookup,1,3,openai:gpt-4o-mini,agent,1
+"What is the effective sample size for r(YW,FLM)?",360.7,360.7,1,,0,0,Simple,Lookup,1,3,openai:gpt-4o-mini,agent,1
+What is the average mGFR value for patients with T2DM in the table?,Average mGFR value for T2DM patients is 193.3,78.4109,0,,0,0,Calculation,Compute,0,6,openai:gpt-4o-mini,agent,1
+What is the difference between the reported sGFR range for patients with T2DM and patients with DM?,Irrelevant question,INSUFFICIENT,0,,0,1,Calculation,Compute,0,4,openai:gpt-4o-mini,agent,1
+What percentage of patients with T2DM are male in the table?,Irrelevant question,50.62%,0,,0,0,Calculation,Compute,0,4,openai:gpt-4o-mini,agent,1
+What is the average age of patients with DM in the table?,Average age of patients with DM is 64,,0,Max turns (8) exceeded,1,0,Calculation,Compute,0,0,openai:gpt-4o-mini,agent,1
+What is the BMI value for the patient with the highest reported sGFR value?,Irrelevant question,NA,0,,0,0,Calculation,Compute,0,1,openai:gpt-4o-mini,agent,1
+"What is the mean ToxB sensitivity for varieties associated with BMW MAGIC2, Oakley Batallion6, and NIAB Elite MAGIC1?",0.35,0.525,0,,0,0,Calculation,Compute,0,4,openai:gpt-4o-mini,agent,1
+"What is the total ToxB sensitivity for varieties associated with Paragon CS5, Paragon SHW CSSL12, and genome sequence 10?",0.2,0.0,0,,0,0,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+"What is the combined ToxB sensitivity for varieties Avalon Cadenza4, Avalon Cadenza NILs5, and TILLING7?",0.2,,0,Max turns (8) exceeded,1,0,Calculation,Compute,1,0,openai:gpt-4o-mini,agent,1
+"What is the average ToxB sensitivity for varieties Claire Malacca9, Genome sequence 10, and Solstice Xi199?",1,,0,Max turns (8) exceeded,1,0,Calculation,Compute,1,0,openai:gpt-4o-mini,agent,1
+"What is the highest ToxB sensitivity among the varieties associated with Oakley Batallion6, Oakley Exsept6, and Oakley Gatsby6?",2,2.0,1,,0,0,Calculation,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the total value of Genetic correlations (EUR) and Mendelian Randomisation (EUR) combined?,177,177,1,,0,0,Arithmetic,Compute,0,13,openai:gpt-4o-mini,agent,1
+What is the percentage of Heritability (EUR) compared to Polygenic Risk Score Max R2 (EUR)?,6.96%,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,agent,1
+What is the average value of GWAS loci (EUR) and Functional enrichment (EUR)?,21.08,21.083333333333336,1,,0,0,Arithmetic,Compute,0,9,openai:gpt-4o-mini,agent,1
+What is the difference between GWAS Catalog Enrichment (EUR) and Colocalisation (EUR)?,26,The difference between GWAS Catalog Enrichment (EUR) and Colocalisation (EUR) is -2.37%.,0,,0,0,Arithmetic,Compute,1,4,openai:gpt-4o-mini,agent,1
+What is the sum of Granulocyte and PAI-1 values in AFR?,256 AFR,291,0,,0,0,Arithmetic,Compute,0,3,openai:gpt-4o-mini,agent,1
+What is the total number of contact hours for courses offered in the 1st study year at all medical faculties?,1085 hours,1085,1,,0,0,Arithmetic,Compute,0,1,openai:gpt-4o-mini,agent,1
+What is the average number of ECTS for courses offered in the 1st study year at all medical faculties?,6.2 ECTS,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,agent,1
+What is the total number of contact hours for courses offered in the 2nd study year at all medical faculties?,140 hours,4595,0,,0,0,Arithmetic,Compute,0,1,openai:gpt-4o-mini,agent,1
+How many courses are offered in the 1st study year at medical faculties in Croatia and Serbia combined?,8 courses,1,0,,0,0,Cell Selection,Lookup,0,1,openai:gpt-4o-mini,agent,1
+What is the average number of ECTS for courses offered in the 2nd study year at all medical faculties?,5 ECTS,5.0,1,,0,0,Arithmetic,Compute,0,6,openai:gpt-4o-mini,agent,1
+What is the total number of experiments conducted for cell line Kelly with Tumor antigen GD2 and Mutation ALK (F1174L)?,4 experiments,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,agent,1
+What is the spiking ratio for Single tumor cells isolated from cell line NB1643/1643M with Tumor antigen GD2 and Mutation ALK (R1275Q)?,"1:10, 1:10, 1:1,000,000","A, 1:10, 1:10, 1:1,000,000",1,,0,0,Arithmetic,Compute,1,1,openai:gpt-4o-mini,agent,1
+What is the total number of experiments conducted for cell lines SKNAS and NB1 with Tumor antigen not specified and Mutation not specified?,3 experiments,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,agent,1
+"What is the total number of experiments conducted for cell lines SW480, H292, and MCF-7 with Tumor antigen EGFR, EpCAM, and HER2 respectively?",3 experiments,3,1,,0,0,Arithmetic,Compute,0,10,openai:gpt-4o-mini,agent,1
+What is the total number of Single tumor cells isolated for all cell lines in the table?,208 cells,,0,Max turns (8) exceeded,1,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,agent,1
+What is the reported range of sGFR for the patients in the study by Maclsaac18?,">90,60-90,<60",">90,60-90,<60",1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the mGFR value for the patients in the study by Liu19?,47.9,47.9,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the sGFR measurement method used in the study by lliadis20?,51 Cr-EDTA,51 Cr-EDTA,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the percentage of male patients in the study by Mapple-Brown22?,37,37,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+What is the BMI of the patients in the study by Bevc26?,31.3,31.3,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+Which population has a Mean ToxB sensitivity of 0.7?,NIAB Elite MAGIC1,NIAB Elite MAGIC1,1,,0,0,Cell Selection,Lookup,1,1,openai:gpt-4o-mini,agent,1
+How many populations have a Mean ToxB sensitivity of 0?,20,20,1,,0,0,Counting,Compute,1,1,openai:gpt-4o-mini,agent,1
+Which variety is associated with Oakley Gatsby6?,Gatsby,,0,Max turns (8) exceeded,1,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,agent,1
+What is the mean ToxB sensitivity for the population NIAB Elite MAGIC1?,0.22,0.24,0,,0,0,Calculation,Compute,0,1,openai:gpt-4o-mini,agent,1
+Which population has the highest Mean ToxB sensitivity?,NIAB Elite Magic1 . Solstice x Xi199,NIAB Elite MAGIC1. Solstice Xi199,1,,0,0,Maximum Value,Lookup,0,1,openai:gpt-4o-mini,agent,1
+What is the value for GWAS loci in the IEAA column?,"24 EUR, 9 AFR",24 EUR,1,,0,0,Cell Selection,Lookup,0,3,openai:gpt-4o-mini,agent,1
+How many AFR values are present in the Hannum column?,24 AFR,2,0,,0,0,Counting,Compute,0,1,openai:gpt-4o-mini,agent,1
+What is the value for Functional enrichment (EUR) in the Granulocyte column?,0,INSUFFICIENT,0,,0,1,Cell Selection,Lookup,1,4,openai:gpt-4o-mini,agent,1
+What is the value for Genetic correlations (EUR) in the GrimAge column?,107,107,1,,0,0,Cell Selection,Lookup,1,3,openai:gpt-4o-mini,agent,1
+What is the percentage value for Polygenic Risk Score Max R2 (EUR) in the PAI-1 column?,1.62%,1.62%,1,,0,0,Cell Selection,Lookup,1,3,openai:gpt-4o-mini,agent,1

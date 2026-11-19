@@ -156,9 +156,11 @@ def main():
                         if i % 25 == 0:
                             print(f"    {cfg} run{r}: {i}/{len(trips)} "
                                   f"${meter.cost_usd:.4f}", flush=True)
+                            _write(f"{cfg}_run{r}_partial", rows, args.out_dir)
                     cost_c[cfg] += meter.cost_usd - cost0
                     acc[cfg].append(ok / len(trips))
                     last_rows[cfg] = rows
+                    _write(f"{cfg}_run{r}", rows, args.out_dir)
                     print(f"  run {r} [{cfg}] acc={ok/len(trips):.1%} "
                           f"cost=${meter.cost_usd:.4f}", flush=True)
         except nbio.BudgetExceeded as e:

@@ -1,0 +1,601 @@
+question,gold,pred,correct,error,unanswered,abstained,reasoning_type,task_family,grounded,tool_calls,model,config,run
+What is the total number of different action types in the table?,8,9,0,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What percentage of the actions involve replying to a question raised in the previous email?,37.5%,95.21484375%,0,,0,0,Percentage Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+How many different actions require looking into questions/problems to gather information?,1,1 action.,1,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the average number of actions that involve setting up or canceling appointments?,1,1 action.,1,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the percentage of actions that involve sharing content?,12.5%,INSUFFICIENT,0,,0,1,Percentage Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the sum of the differentia event, event location, and event time?",Irrelevant question,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between the Purpose and the Associated fact?,Irrelevant question,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"If we multiply the Accessory determiner by the Accessory quality, what is the result?",Irrelevant question,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the average of the Differentia quality, Origin location Quality modifier, and Purpose?",Irrelevant question,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"If we divide the Associated fact by the Event location, what is the quotient?",Irrelevant question,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the sum of the values in cells A2, B3, and C4?",Irrelevant question,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"If the value in cell A1 is multiplied by the value in cell B2, what is the result?",Irrelevant question,INSUFFICIENT.,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the average of the values in cells B1, C2, and A4?",Irrelevant question,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"If the value in cell C1 is divided by the value in cell B2, what is the quotient?",Irrelevant question,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the difference between the values in cells B4, C3, and A2?",Irrelevant question,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+How many schools in total are mentioned in the sentences?,Irrelevant question,INSUFFICIENT,0,,0,1,Counting,Compute,0,0,openai:gpt-4o-mini,baseline,1
+How many schools follow the British curriculum?,Irrelevant question,9 schools follow the British curriculum.,0,,0,0,Counting,Compute,0,0,openai:gpt-4o-mini,baseline,1
+How many schools offer French lessons?,Irrelevant question,INSUFFICIENT,0,,0,1,Counting,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total number of schools offering Arabic lessons?,Irrelevant question,INSUFFICIENT,0,,0,1,Counting,Compute,0,0,openai:gpt-4o-mini,baseline,1
+How many schools are mentioned to be home to the French Institute?,Irrelevant question,1 school,0,,0,0,Counting,Compute,0,0,openai:gpt-4o-mini,baseline,1
+Where is the best place in Qatar for holiday?,Irrelevant question,'RNN,0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+Where is the best place for Snorkeling in Qatar?,Irrelevant question,'original,0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+Where can you find good outdoor plants in Doha?,Irrelevant question,INSUFFICIENT.,0,,0,1,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+Where can you buy indoor plants in Doha?,Irrelevant question,'Can anyone tell me where I can buy some indoor plants in Doha? Are there any nurseries; besides the indoor plants in Doha? Also; are there? Thanks in advance,0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+Are there any photography competitions in Doha?,Irrelevant question,INSUFFICIENT,0,,0,1,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+What is the total count of URLs that are related to Qatar?,2,3,0,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+How many sources are classified as 'Reputed'?,2,2,1,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What percentage of the sources are forums?,20%,20%.,1,,0,0,Percentage Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+How many entries mention Qatar National Day?,2,2,1,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the average number of words in the snippets that mention Qatar?,23.75,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the Action for replying with a short yes/no to a question raised in the previous email?,REPLY-YESNO,REPLY-YESNO,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+When should you use the Action 'REPLY-ACK'?,"For simple acknowledgements such as 'got it, thank you.","'Simple acknowledgements such as 'got it', 'thank you.'",0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+What does the Action 'INVESTIGATE' involve?,Looking into questions/problems to gather necessary information and replying with that information.,Look into some questions/problems to gather the necessary information and reply with that information.,0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+When would you use the Action 'SETUP-APPOINTMENT'?,To set up or cancel appointments.,'Set up appointments/cancel appointments.',0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+What does the Action 'SHARE-CONTENT' involve?,"Sharing content, such as attachments, links, or locations on the network.","Share content, as an attachment, a link in the email body, or a location on the network that is known to both the sender and recipients.",0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+What is the description of the Differentia quality role?,a quality that distinguishes the entity from the others under the same supertype,'a quality that distinguishes the entity from the others under the same supertype',1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What does the Event location role refer to?,the location of a differentia event,the location of a differentia event,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the main goal of the entity according to the Purpose role?,the main goal of the entity's existence or occurrence,the main goal of the entity's existence or occurrence,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the Accessory quality role characterized by?,a quality that is not essential to characterize the entity,a quality that is not essential to characterize the entity,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What does the Associated fact role entail?,a fact whose occurrence is/was linked to the entity's existence or occurrence,'a fact whose occurrence is/was linked to the entity's existence or occurrence',1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+"When waves of two different frequencies interfere, what phenomenon Occurs?",beating,beating,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+"Because trees add water vapor to air, cutting down forests leads to longer periods of what?",drought,drought,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+"What material comprises the sun and other stars, as well as lightning and the northern lights?",plasma,plasma,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+How many French lessons does the pre-school give?,Irrelevant question,INSUFFICIENT,0,,0,1,Cell Value Extraction,Compute,0,0,openai:gpt-4o-mini,baseline,1
+When did France buy the property?,Year of purchase: 1952,1952,1,,0,0,Cell Value Extraction,Compute,0,0,openai:gpt-4o-mini,baseline,1
+How many schools follow the British curriculum?,Schools following British curriculum: 7,9 schools,0,,0,0,Cell Value Extraction,Compute,0,0,openai:gpt-4o-mini,baseline,1
+How many American schools are included in the new schools?,American schools: 2,2 American,1,,0,0,Cell Value Extraction,Compute,0,0,openai:gpt-4o-mini,baseline,1
+How many total schools are mentioned in the sentence?,Total schools mentioned: 24,INSUFFICIENT,0,,0,1,Summation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+Where in Qatar is the best place for Snorkeling?,Irrelevant question,'original,0,,0,0,Direct Answer,Compute,0,0,openai:gpt-4o-mini,baseline,1
+Are there any nurseries in Doha?,Irrelevant question,'Can anyone tell me where I can buy some indoor plants in Doha? Are there any nurseries; besides the indoor plants in Doha? Also; are there? Thanks in advance,0,,0,0,Yes/No Question,Compute,0,0,openai:gpt-4o-mini,baseline,1
+Where is the best place for holiday in Qatar?,Irrelevant question,'RNN,0,,0,0,Direct Answer,Compute,0,0,openai:gpt-4o-mini,baseline,1
+Where can I buy indoor plants in Doha?,Irrelevant question,'Can anyone tell me where I can buy some indoor plants in Doha? Are there any nurseries; besides the indoor plants in Doha? Also; are there? Thanks in advance,0,,0,0,Direct Answer,Compute,0,0,openai:gpt-4o-mini,baseline,1
+Are there any photography competitions in Doha?,Irrelevant question,INSUFFICIENT,0,,0,1,Yes/No Question,Compute,0,0,openai:gpt-4o-mini,baseline,1
+Is the URL qppstudio.net related to Qatar?,No,No,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the source type of dohanews.co?,Reputed,Reputed,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Is iloveqatar.net related to Qatar?,Yes,Yes,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the source type of cnn.com?,Reputed,Reputed,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the snippet about from icassociation.co.uk?,"In partnership with ProEvent Qatar, ICA can confirm that the World Stars will be led on the 17 December, World Stars vs Qatar Stars - Qatar National Day.","In partnership with ProEvent Qatar, ICA can confirm that the World Stars will be led on the 17 December, World Stars vs Qatar Stars - Qatar National Day.",1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+"What is the total number of tokens in English(PTB) train, Chinese(CTB) dev, and Chinese(CTB) test combined?","2,430k + 22k + 25K = 2,477k","2,477k",0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the average number of tokens per sentence in Sents for all categories?,,INSUFFICIENT,1,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the ratio of tokens in English(PTB) train to tokens in Chinese(CTB) test?,"2,430k / 25k ≈ 97.20",97.2,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What percentage of the total tokens is represented by Chinese(CTB) dev?,"22k / (2,430k + 84k + 145k + 1,611k + 22k + 25k) * 100 ≈ 0.51%",INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"If the number of tokens in English(PTB) dev is 40k, what is the difference in token count between English(PTB) dev and Chinese(CTB) test?",40k - 25k = 15k,INSUFFICIENT.,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total batch size when considering both English and Chinese batches?,15,15,1,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the total number of word embedding dimensions across all trained and pretrained word embeddings?,556,684,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total number of layers in the LSTM model?,1,1 layer,1,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the total number of parameters in the model considering all specified parameters?,1222,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the dropout rate percentage specified in the table?,30%,0.3,0,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the average F1 score for the BPI dataset?,0.54,0.53,0,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the difference between the Precision of MaxEnt for BPI dataset and GHS dataset?,0.04,-0.04,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total Recall for GraphNav across both datasets?,1.04,'1.04',1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the ratio of Precision to Recall for EditDist in the BPI dataset?,0.6769,0.6769,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the sum of Precision and F1 score for GraphNav in the GHS dataset?,1.09,1.09,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+Which dataset has the highest number of threads?,Avocado (Email),'Avocado (Email),1,,0,0,Maximum Value,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which dataset has the lowest average message length?,Ubuntu Dialog (IRC),'Ubuntu Dialog (IRC)',1,,0,0,Minimum Value,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the average thread length for the r/politics (Reddit) dataset?,2.7,2.7,1,,0,0,Average Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+How many messages were exchanged in the Avocado (Email) dataset?,121917,121917,1,,0,0,Summation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the total number of messages across all three datasets?,581590,581590,1,,0,0,Total Summation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between the Precision of A0 and A1 in Unknown_4?,5.4,2.8,0,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+"What is the average Recall for AM-ADV, AM-DIR, and AM-LOC in DEEPATT?",57.9,57.87,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the F1 score for AM-PNC in Unknown_4?,65.0,62.8,0,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the total Recall for Overall in DEEPATT?,84.9,84.9,1,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the percentage increase in Precision from A2 to A3 in Unknown_4?,2.8%,3.5%,0,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the average F1 score for neural models in the table?,91.8,91.4,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference in F1 score between Dyer et al. (2016) and Kuncoro et al. (2017)?,Difference in F1 score is 0.3,2.3,0,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total F1 score for ensemble neural models in the table?,Total F1 score for ensemble neural models is 92.3 + 91.2 + 90.5 + 90.7 = 364.7,273.5,0,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the highest F1 score among feature-rich models?,The highest F1 score among feature-rich models is 91.7,91.9,0,,0,0,Comparison,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference in F1 score between fully-supervised and semi-supervised models?,Difference in F1 score is 0.6 (Average score of both types of models before subtraction),INSUFFICIENT,0,,0,1,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the total reduction for Unary, NP Int, and Clause Att error types?",337,143 (25%) + 129 (28%) + 65 (17%) = 337 (total reduction),0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What percentage of reduction does Co-ordination error type account for?,12.1%,41%,0,,0,0,Percentage Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+How many more errors are there in 1-word Span compared to NP Attachment?,471,143,0,,0,0,Subtraction,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total number of errors for Different label and Mod Attach error types?,691,647,0,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What percentage of the total errors do UNSET add and Other error types contribute?,14.3%,INSUFFICIENT,0,,0,1,Percentage Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+How many training sentences are in English(PTB)?,"39,831","39,831",1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the number of tokens in Chinese(CTB) test data?,25k,25k,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+How many development sentences are in English(PTB)?,"1,346","1,346",1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the total number of tokens in Chinese(CTB) data?,1658K,"1,611k",0,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+How many training tokens are there in English(PTB)?,"2,430k","2,430k",1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the value of Hidden unit dim?,512,512,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the value of English batch size?,10,10,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the value of Chinese batch size?,5,5,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the value of Beam size in search?,10,10,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the value of LSTM Layers?,1,1,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the Precision for the method EditDist in the BPI dataset?,0.44,0.44,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the F1 score for the method MaxEnt in the GHS dataset?,0.66,'0.66,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the Recall for the method GraphNav in the BPI dataset?,0.54,0.54,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the Precision for the method MaxEnt in the BPI dataset?,0.46,0.46,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the F1 score for the method GraphNav in the GHS dataset?,0.53,0.53,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which dataset has the highest number of threads?,Avocado (Email),'Avocado (Email),1,,0,0,Maximum Value,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which dataset has the lowest average message length?,Ubuntu Dialog (IRC),'Ubuntu Dialog (IRC)',1,,0,0,Minimum Value,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the average thread length for the r/politics (Reddit) dataset?,2.7,2.7,1,,0,0,Average Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+How many messages were exchanged in the Avocado (Email) dataset?,121917,121917,1,,0,0,Summation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the total number of messages across all three datasets?,581590,581590,1,,0,0,Total Summation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the Precision for label A2 in He et al. (2017)?,73.6,73.6,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the Recall for label AM-LOC in Unknown_4?,Irrelevant question,61.9,0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+What is the F1 score for label A3 in .1 DEEPATT?,75.3,75.3,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the Precision for label AM-DIR in He et al. (2017)?,48.3,48.3,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the overall Recall for the models in the table?,"82.4 (He et al. (2017)), 84.9 (DEEPATT)",82.4%,1,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+What is the F1 score for Petrov and Klein (2007) using feature-rich models?,90.1,90.1,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which model achieved an F1 score of 92.3 using neural models?,This paper (ensemble),This paper (ensemble) (neural models),1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the F1 score for Huang (2008) using feature-rich models?,91.7,91.7,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which model achieved the highest F1 score using neural models?,Choe and Charniak (2016),93.6,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What type of models achieved an F1 score of 91.9 according to Petrov (2010)?,"fully-supervised, feature-rich, ensemble models",ensemble (feature-rich models),0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+What is the total number of errors of type 'PP Attach'?,850,850,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the reduction percentage for errors of type '1-word Span'?,29%,29%,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+How many errors fall under the category 'NP Int'?,464,464,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the top-down number for 'Co-ordination' errors?,225,225,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which error type has the highest number of errors?,PP Attach,'PP Attach,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+"What is the total loss value of PED, PCE, and PJS mean divergences?",,0.549,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between RS-PED and RS-PKL loss values for PED mean divergences ?,Difference = 0.189 - 0.164 = 0.025,0.025,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the average value of CJS, PKL, and CED mean divergences for the PED loss function?",Average = (0.728 + 0.323 + 0.068) / 3 = 0.373,0.373,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the ratio of RS-PCE to RS-Huber loss values for the PED mean divergences?,Ratio = 0.169 / 0.183 = 0.9235,0.169/0.183,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the percentage difference between RS-MMD and RS-PJS loss functions values for the PED mean divergence?,Percentage Difference = ((0.196 - 0.183) / 0.196) * 100% = 6.6327%,0.013,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the average Precision for all models with data in the table?,Average Precision: 79.63,INSUFFICIENT,0,,0,1,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the percentage of completely correct predicates (Comp.) for the model 'DEEPATT (CNN)' for the Brown Test?,Percentage of Comp. for DEEPATT (CNN) = 45.9,'45.9',1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference in F1 score between the model 'DEEPATT (FFN)' and 'DEEPATT (RNN)' for the Development Test?,Difference in F1 score: 1.3,1.3,0,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total Recall for all models for the Development Test in the table?,Total Recall: 804.7,INSUFFICIENT,0,,0,1,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the Precision for the model 'Toutanova et al. (Ensemble) (2008)' for WSJ Test?,Precision for Toutanova et al. (Ensemble) (2008): 81.9,INSUFFICIENT,0,,0,1,Lookup,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference in model accuracy between 100D CYK Tree-LSTM and 300D SPINN?,1.6%,1.6%,1,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the ratio of parameters between 300D Gumbel Tree-LSTM and 600D (300+300) Gated-Attention BiLSTM?,0.25,0.25,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+How much faster is the training time of 300D Gumbel Tree-LSTM compared to 100D Gumbel Tree-LSTM?,1 hour slower,1.0 hours.,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total number of parameters for 512-1024-2048D Shortcut-Stacked BiLSTM?,140.2M,'140.2M,1,,0,0,Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+By how much does the model accuracy increase from 100D Gumbel Tree-LSTM to 600D Gumbel Tree-LSTM?,3.4%,5.4%,0,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+"What is the total ASR for C&W (L2), FGM-L1, and I-FGM-L2 attack methods for MNIST dataset?",239,239,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the average L2 value for C&W (L2), FGM-L2, and EAD (EN rule) attack methods for the MNIST dataset?",2.419,2.086,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the total L∞ value for FGM-L∞, I-FGM-L1, and EAD (L1 rule) attack methods for the CIFAR10 dataset?",0.272,0.377,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between the L1 value of FGM-L1 and the L1 value of I-FGM-L2 attack methods for the MNIST dataset?,20.56,23.18,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the ratio of ASR to L2 value for C&W (L2) attack method for the MNIST dataset?,50.71,50.7,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the total number of ICD codes for Retinopathy (RET), Neuropathy (NEU), and Nephrology (NEP) combined?",14,14.,1,,0,0,Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the average number of ICD codes per complication listed in the table?,5.8,INSUFFICIENT,0,,0,1,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+How many different types of vascular diseases are included in the ICD codes for Vascular Disease (VAS)?,3,5 different types of vascular diseases are included in the ICD codes for Vascular Disease (VAS).,0,,0,0,Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the range of ICD codes for Hyperosmolar (HYPER) starting with letter E?,E0800 - E1300,"E0800, E0900, E1100, E1300",1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+How many ICD codes are listed for Neuropathy (NEU) and Nephrology (NEP) combined?,8,8,1,,0,0,Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the average number of members in the 'Lifted Small' scenario at observation 12?,55.60,5.9,0,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the total time (sec) for the 'Lifted All' scenario at observation 20?,65.62,55.70,0,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the standard deviation of predicates in the 'Lifted Small' scenario at observation 26?,1.1,3.50,0,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the ratio of average bis goals between observation 4 and observation 18 in the 'Lifted All' scenario?,1.2,1.20,1,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the difference in average number of members between observation 10 and observation 23 in the 'Lifted Small' scenario?,7.2,2.5,0,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+How many times did the event 'walk' occur in the True Event column?,3 times,3 times,1,,0,0,Counting Occurrences,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total number of unique events in the GRU-Lang column?,12,5,0,,0,0,Counting Unique Values,Compute,1,0,openai:gpt-4o-mini,baseline,1
+How many times did the event 'flip' occur in the GRU-Lang+Time column?,1 time,1 time,1,,0,0,Counting Occurrences,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the most common event in the GRU-Lang+Time+Context column?,kitchen,"'walk, *, kitchen'",1,,0,0,Identifying Most Common Value,Compute,1,0,openai:gpt-4o-mini,baseline,1
+How many unique combinations of events are present in the True Event column?,8191 unique combinations,5,0,,0,0,Counting Unique Combinations,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the average value of NEU, VAS, and HYPER for the Survival Log-normal method?",Average = (0.5241 + 0.5497 + 0.5799) / 3 = 0.5512,0.5241,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between RET values for the methods using Survival Weibull and Regression Squared?,Difference = 0.5066 - 0.5205 = -0.0139,-0.0503,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total value of VAS for the methods using Squared and RankSvx Poisson?,Total = 0.4830 + 0.5687 = 1.105,1.1466,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the ratio of NEP to VAS for the Survival Cox method?,Ratio = 0.6027 / 0.6092 = 0.989,0.9876,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the average value of RET, NEU, and NEP for all methods?",Average = (0.5552 + 0.6107 + 0.6027 + 0.5066 + 0.5207 + 0.5699 + 0.5108 + 0.5217 + 0.5821 + 0.5082 + 0.5241 + 0.5806 + 0.5205 + 0.5217 + 0.5100 + 0.5643 + 0.5244 + 0.5424 + 0.4764 + 0.5709 + 0.5332 + 0.5569 + 0.5643 + 0.6164 + 0.5650 + 0.6078 + 0.6361 + 0.5613 + 0.6026 + 0.6405) / 30 = 0.5918,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the PED Divergence loss value for PKL (Wang et al. 2017)?,0.163,'0.163,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the PCE value for RS-PED?,2.733,'0.055,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which method has the highest PED value?,MMD (Borgwardt et al. 2006),'LDL Method (Cui et al. 2017)',1,,0,0,Max Value,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the CJS value for Our RS-CJS?,0.040,'0.158',0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which method has missing values for most metrics?,LDL Method (Cui et al. 2017),'LDL Method (Cui et al. 2017)',1,,0,0,Missing Values,Compute,1,0,openai:gpt-4o-mini,baseline,1
+Which model achieved the highest Precision in the WSJ Test?,"DEEPATT (FFN, Ensemble)","'DEEPATT (FFN, Ensemble)'",1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the Recall value for He et al. (Ensemble) (2017) in the Brown Test?,72.4,72.4,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which model has the highest F1 score in the Development task?,"DEEPATT (FFN, Ensemble)","DEEPATT (FFN, Ensemble)",1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the percentage of completely correct predicates (Comp.) for Punyakanok et al. (Ensemble) (2008) in the Combined task?,Irrelevant question,32.3,0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+Which model has missing data for the Recall value in the Development task?,Toutanova et al. (Ensemble) (2008),Toutanova et al. (Ensemble) (2008),1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which model achieved the highest accuracy?,512-1024-2048D Shortcut-Stacked BiLSTM (Nie and Bansal 2017),'512-1024-2048D Shortcut-Stacked BiLSTM (Nie and Bansal 2017)',1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the number of parameters for the model '300D Gumbel Tree-LSTM (Ours)'?,2.9M,2.9M,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which model has the lowest time requirement?,100D Gumbel Tree-LSTM (Ours),'100D Gumbel Tree-LSTM (Ours)',1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the accuracy of the model '300D SPINN (Bowman et al. 2016)'?,83.2,83.2,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which model has the highest number of parameters?,512-1024-2048D Shortcut-Stacked BiLSTM (Nie and Bansal 2017),'512-1024-2048D Shortcut-Stacked BiLSTM (Nie and Bansal 2017),1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the Attack Success Rate (ASR) for FGM-L2 on CIFAR10?,42.8,42.8,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the L_∞ norm for I-FGM-L2 on ImageNet?,0.086,0.086,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which attack method has the highest L1 norm on MNIST?,I-FGM-L∞,'127.2',0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the L2 norm for EAD (EN rule) on ImageNet?,1.563,0.238,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+For which attack method is the ASR 100 on MNIST?,"C&W (L2), I-FGM-L1, I-FGM-L2, I-FGM-L_∞, EAD (EN rule), EAD (L1 rule)","C&W (L2), I-FGM-L1, I-FGM-L2, I-FGM-L",1,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+What is the abbreviation for kidney disease characterized by hardening of the glomerulus?,NEP,NEP,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which ICD codes are associated with Retinopathy?,"25050, 25052, 24950, 24951, 36201-36207, E08311-E0839","25050, 25052, 24950, 24951, 36201-36207, E08311-E0839",1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What type of disease is Neuropathy and which body parts does it most often affect?,Nerve damage; legs and feet,nerve damage affecting the legs and feet,0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+What is the abbreviation for eye disease caused by damage to the blood vessels in the tissue at the back of the eye?,RET,RET,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which serious condition is caused by high blood sugar levels?,Hyperosmolar,Hyperosmolar (HYPER),1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the average number of members in the 'Lifted Small' group at Time 0.48 seconds?,55.60,5.9,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the average Bis goals in the 'Lifted All' group at Time 0.37 seconds?,3.70,4.40,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What was the average number of unexplained/discarded observations in the 'Lifted Small' group at Time 0.22 seconds?,5.0,5.0,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the average number of actions in the optimal plan for the 'Lifted All' group at Time 65.62 seconds?,40.6,INSUFFICIENT.,0,,0,1,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What was the standard deviation of Bis goals for the 'Lifted Small' group at Time 74.66 seconds?,0.6,INSUFFICIENT,0,,0,1,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What true event occurred at Timestamp 2015-02-20 11:59:40 in the True Event column?,"turn_off, faucet, kitchen","turn_off, faucet, kitchen",1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What action was performed at Timestamp 2015-02-20 11:59:51 in the GRU-Lang+Time column?,"walk, bottle, kitchen","walk, bottle, kitchen",1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What task was done at Timestamp 2015-02-20 11:59:36 in the GRU-Lang column?,"wash, hand, kitchen","wash, hand, kitchen",1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What was the activity at Timestamp 2015-02-20 11:59:53 in the GRU-Lang+Time+Context column?,"hold, bottle, kitchen","'hold, bottle, kitchen",1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What was the action taken at Timestamp 2015-02-20 12:00:00 in the True Event column?,"put, bottle, kitchen","put, bottle, kitchen",1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the average value for Cox Method?,0.5860,0.5860,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which Method has the highest VAS value?,RankSvx Poisson,'RankSvx',0,,0,0,Maximum Value,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the RET value for RankSvx Log-normal Method in the table?,0.5613,0.5613,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which Method has the lowest NEU value?,Survival Weibull,'Log-normal',0,,0,0,Minimum Value,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the VAS value for Survival Weibull Method?,0.5399,0.5399,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the difference in AUC p-value between Horizontal Anomaly Detection at 0% and 60%?,0.5302 - 0.6512 = -0.121,0.1210,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the percentage change in AUC p-value for Anomaly detection via Affinity Propagation from 15% to 75%?,((0.7811 - 0.8739) / 0.8739) * 100 = -10.62%,-10.67%,0,,0,0,Percentage Change,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the average AUC p-value for Multi-view Low-Rank Analysis across all percentages?,(0.7038 + 0.6798 + 0.6512 + 0.6264 + 0.5984 + 0.5603) / 6 = 0.6367,INSUFFICIENT,0,,0,1,Average Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the highest AUC p-value among all algorithms at 30%?,0.8826,'0.8946±0.0397 (6.14x10-18),0,,0,0,Maximum Value,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the AUC p-value for Ours at 45%?,0.8543,'0.8543 ± 0.0245,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the value of (l_N + l_A) / l_C in 32-bit Components?,2.6715328467,2.6766467065868265,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between (l_N l_MSE) and (l_C + l_MSE) in 48-bit Components?,IRrelevant question,0.209,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the product of (l_N + l_A) and l_C in 24-bit Components?,0.047,0.0467,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the sum of (l_N + l_C + l_A) in 48-bit Components?,0.395,0.395,1,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the ratio of (l_N l_MSE) to l_N in 32-bit Components?,1.0284900285,1.0287,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total memory complexity for the LSTM model?,Irrelevant question,4(md + d^2) + 2dh + h,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total number of parameters for the AP-BiLSTM model?,5.86M,5.86M,1,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the total memory complexity for the QRNN model?,Irrelevant question,3 kdm + 2dh + h,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total memory complexity for the CTRN model?,Irrelevant question,3 kdm + 2dh + h,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference in memory complexity between the LSTM and AP-BiLSTM models?,Irrelevant question,'4(md + d^2) + 2dh + h - 4(md + d^2) = 2dh + h,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the average RMSE for FilmTrust, Flixster, and Epinions datasets when d = 5?",Average RMSE = 1.062,1.112,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference in MAE between SoDimRec and SREPS for Flixster dataset when d = 5?,Difference in MAE = 0.798 - 0.726 = 0.072,0.172 (± 0.0035),0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total RMSE for all datasets when d = 10?,Total RMSE =  32.379,'4.063 (± 0.0450)',0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the percentage increase in RMSE for Epinions dataset when d changes from 5 to 10?,Percentage increase = ((1.520 - 1.138) / 1.138) * 100% = 33.57%,-8.00%,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+Which dataset has the lowest average MAE when d = 10?,FilmTrust has the lowest average MAE of 0.657 when d = 10.,'FilmTrust d = 10',0,,0,0,Comparison,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the average runtime for PCA-L1 across the three databases?,48.76,48.76 ± 0.39,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+How much greater is the runtime for LDA-L1 in AR database compared to PCA in CMU-PIE database?,116.2,116.20 s,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total runtime for F-LPP across the three databases?,22.17,22.17 ± 0.54,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+By how much does the runtime for LPP exceed the runtime for PCA in Extended Yale B database?,0.08,0.08 ± 0.19,1,,0,0,Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the ratio of the runtime for LDA in AR database to the runtime for PCA-L1 in CMU-PIE database?,0.27,0.1713,0,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the AUC p-value for Multi-view Low-Rank Analysis at 30%?,0.6512 ± 0.0471 (1.84x10-15),'0.6512 ± 0.0471 (1.84x10-15),1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which algorithm has the highest AUC p-value at 0%?,Ours,'Ours',1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the AUC p-value for Dual-regularized Multi-view Outlier Detection at 75%?,0.6244 ± 0.0578 (3.28x10-16),'0.6244 ± 0.0578 (3.28x10-16),1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which algorithm shows a decreasing trend in AUC p-value from 0% to 75%?,All algorithms,'Horizontal Anomaly Detection (HOAD),0,,0,0,Trend Analysis,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the AUC p-value for Anomaly detection via Affinity Propagation at 45%?,0.8340 ± 0.0467 (9.83x10-17),'0.8340±0.0467 (9.83x10-17)',1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the mAP value for Components with 32-bit?,0.375,'0.137,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the mAP value for l_N + l_C + l_A?,Irrelevant question,0.369,0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+Which combination of components has the highest mAP value?,Irrelevant question,'l_N + l_C + l_A' with '0.395',0,,0,0,Maximum Value,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+How does the mAP value change from 24-bit to 48-bit for l_N l_MSE?,0.008,0.008,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+Which combination of components has the smallest difference in mAP value between 32-bit and 48-bit?,l_N l_MSE,'l_N l_MSE',1,,0,0,Minimum Difference,Compute,1,0,openai:gpt-4o-mini,baseline,1
+Which model has the highest memory complexity?,Irrelevant question,'AP-BiLSTM',0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+What is the number of parameters for the QRNN model?,1.05M,1.05M,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+How does the memory complexity of CTRN compare to LSTM?,Irrelevant question,'3 kdm + 2dh + h' is less complex than '4(md + d^2) + 2dh + h'.,0,,0,0,Comparison,Compute,0,0,openai:gpt-4o-mini,baseline,1
+Which model has the lowest memory complexity?,Irrelevant question,'QRNN,0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+How does the memory complexity of LSTM compare to AP-BiLSTM?,Irrelevant question,'4(md + d^2) + 2dh + h vs '4(md + d^2) + 4d^2,0,,0,0,Comparison,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the MAE value for FilmTrust dataset with d=5?,Irrelevant question,0.688 (± 0.0087),0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+What is the RMSE value for Epinions dataset with d=10?,Irrelevant question,'1.198 (± 0.0105)',0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+Which dataset has the lowest MAE value for d=10?,FilmTrust,'FilmTrust d = 10',1,,0,0,Comparison,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the RMSE value for Ciao dataset with d=5?,Irrelevant question,'1.216 (± 0.0112)',0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+How does the MAE value for Flixster dataset compare between d=5 and d=10?,Decreased,'0.816 (± 0.0118) vs '0.771 (± 0.0109),0,,0,0,Trend Analysis,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the runtime for PCA in the Extended Yale B database?,1.30 ± 0.25,1.30 ± 0.25,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the runtime for LDA-L1 in the AR database?,117.16 ± 4.25,117.16 ± 4.25,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which method has the highest runtime in the CMU-PIE database?,LDA,LDA-L1,1,,0,0,Cell Comparison,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the runtime for F-LPP in the Runtime (s) column?,Irrelevant question,14.16±0.32,0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+Which method has the lowest runtime overall?,PCA,PCA,1,,0,0,Cell Comparison,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the Precision at 5 for GDMF with K=10?,0.0281,'0.0281,1,,0,0,Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the Recall at 10 for LDMF with K=15?,0.1511,'0.1511',1,,0,0,Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the Precision at 10 for MF with K=5?,0.0242,0.0242,1,,0,0,Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the Recall at 5 for BPR with K=15?,0.1898,INSUFFICIENT,0,,0,1,Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the Precision at 5 for DMF with K=5?,0.0337,0.0337,1,,0,0,Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the average NMI index (%) across all datasets for the Karrer method?,Average NMI index (%) = (83.72 + 77.02 + 85.10 + 54.20 + 87.06 + 45.68 + 17.06 + 20.98 + 49.13 + 12.28) / 10 = 53.22,INSUFFICIENT,0,,0,1,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the absolute difference between the NMI index (%) for Karate club and Friendship7 datasets for the Karrer method?,Difference = 85.10 - 83.72 = 1.38,2.38%,0,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total NMI index (%) for all datasets except Political blogs and PubMed for the Karrer method?,Total NMI index (%) = 83.72 + 77.02 + 85.10 + 54.20 + 87.06 + 17.06 + 20.98 + 49.13 = 474.27,419.05,0,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What percentage of the NMI index (%) for US Football is higher than the NMI index (%) for Political books for the SNMF method?,Percentage = ((90.38 - 56.48) / 56.48) * 100 = 60.02%,100%,0,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the average NMI index (%) for the Karrer method on all the datasets?,Average NMI index (%) = (83.72 + 77.02 + 85.10 + 54.20 + 87.06 + 45.68 + 17.06 + 20.98 + 49.13 + 12.28) / 10 = 53.22,54.78,0,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the average of the upper bound AUC value for all models?,Irrelevant question,INSUFFICIENT,0,,0,1,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between the upper bound AP value of Clock-work RNN and HE-LSTM for the death test?,Difference in AP value: 0.05,0.0506 ± 0.0014,0,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total upper bound AP value across all models for the death test?,Total AP value: 4.4117,5.0523 ± 0.0029,0,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+Which model has the highest AUC value for all tests?,Model with the highest AUC value: HE-LSTM,LSTM,0,,0,0,Identification,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+What is the ratio of lab test AUC to death test AUC for Phased LSTM using the upper bound values?,Ratio of lab test AUC to death test AUC for Phased LSTM: 0.912,0.911,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference in performance between DL (Basic) on Facebook and Twitter?,1.39%,1.39%,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the average performance of DL (Basic) across all networks?,94.45%,94.95%,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+By how much does the performance decrease from DL+CL to DL+DT on Weibo?,0.2%,0.22%,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total performance of DL+ML and DL+NJ on Facebook and Twitter?,380.41%,380.41%,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference in performance between DL+CJ on Twitter and Douban?,2.08%,0.88%,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between the accuracy for 16 bits in DDCMH-1 and DDCMH-2 on the MIRFlickr-25K dataset?,0.0068,0.0068,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the average accuracy for 32 bits across all methods on the MIRFlickr-25K dataset?,0.7485,0.7485,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total accuracy for 64 bits nn NUS-WIDE dataset?,2.1269,0.7412,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between the accuracy for DDCMH and DDCMH-1 in 64 bits on the MIRFlickr-25K dataset?,0.0569,0.0569,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the ratio of accuracy for 32 bits in DDCMH-2 to 64 bits in DDCMH on NUS-WIDE dataset?,0.9154,0.7322 / 0.7412,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the average performance across all training methodologies and platforms?,Average performance is 95.30%,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+Which training methodology has the highest average performance across all platforms?,ST-BC,ST-BC,1,,0,0,Comparison,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the difference in performance between Facebook and Douban for JT-BS training methodology?,1.48%,1.48%,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+Which platform has the highest performance for ST-BC training methodology?,Douban with 97.14%,'Douban',0,,0,0,Comparison,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total performance for JT-BC training methodology?,379.3%,95.11%,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the Precision at 5 (P@5) for the algorithm BPR?,Irrelevannt question,0.0293,0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+What is the Recall at 10 (R@10) for the algorithm GDMF?,Irrelevant question,0.2115,0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+What is the Precision at 10 (P@10) for the algorithm LDMF?,Irrelevant question,'0.0025',0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+What is the Recall at 5 (R@5) for the algorithm DMF?,Irrelevant question,0.1562,0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+What is the Precision at 5 (P@5) for the algorithm GDMF with K=15?,0.0316,'0.0316',1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the NMI index (%) for the 'Political blogs' dataset using the 'DNR_CE' method?,51.7,58.2,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the NMI index (%) for the 'US Football' dataset using the 'NetMRF' method?,92.42,92.42%,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the NMI index (%) for the 'Cora' dataset using the 'MNDP' method?,33.99,26.08%,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the NMI index (%) for the 'Northeastern' dataset using the 'SNMF' method?,38.66,38.66%,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the NMI index (%) for the 'Karate club' dataset using the 'SNMF' method?,100,100,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which method has the highest AUC for the death outcome?,HE-LSTM,LSTM,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the AP value for Clock-work RNN in the death outcome?,0.7181 ± 0.0003,'0.7181 ± 0.0003,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which method has the lowest AUC for the lab test outcome?,Independent LSTM(shared weight),Independent LSTM(shared weight),1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the AUC value for RETAIN in the lab test outcome?,0.7325 ± 0.0022,0.7325 ± 0.0022,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which method has the highest AP for both death and lab tests?,HE-LSTM,LSTM,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the accuracy for Objective Channel Facebook in DL (Basic)?,94.82%,94.82%,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which Objective Channel has the highest accuracy across all Networks ?,DL+ML,ALL,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the accuracy for Weibo in DL+DT?,94.15%,94.15%,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which Network has the lowest accuracy in DL+NJ Objective Channel?,Twitter,Weibo,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the accuracy for Douban in DL+CJ Objective Channel?,96.34%,96.34%,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the method for MIRFlickr-25K with 32 bits with the highest performance?,DDCMH,DDCMH,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the performance score for DDCMH-2 with 64 bits in NUS-WIDE?,0.6849,0.6849,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which method has the highest performance score with 64 bits in the MIRFlickr-25K dataset?,DDCMH,0.7905,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the performance score for DDCMH in MIRFlickr-25K with 32 bits?,0.7766,0.7766,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+How does the performance of DDCMH-1 with 16 bits in NUS-WIDE compare to DDCMH-2 with 16 bits?,DDCMH-1 has a higher performance score.,0.6839 vs 0.6723,0,,0,0,Comparison,Compute,0,0,openai:gpt-4o-mini,baseline,1
+Which training methodology had the highest performance on Twitter?,ST-BC,ST-BC,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the performance percentage for JT-BS on Weibo?,94.17%,94.17%,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which social media platform had the lowest performance for the JT-BC training methodology?,Twitter,Twitter,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the average performance percentage for all training methodologies on Douban?,96.57%,96.57%,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+Which combination of training methodology and social media platform had the highest overall performance?,ST-BC on Douban,ST-BC on Douban,1,,0,0,Comparison,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the total Source to interference ratio (SIR) for Bass, Drum, and Other for MLP model?",Total SIR = 2.56 + 5.76 + 1.17 = 9.49,8.10,0,,0,0,Arithmetic Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between the Source to distortion ratio (SDR) for Vocal and Drum for DCNN model?,Difference = 2.05 - 2.18 = -0.13,0.13,0,,0,0,Arithmetic Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the average Source to artifact ratio (SAR) for all categories for DCNN and DRNN models?,Average SAR = (6.88 + 6.48 + 5.98 + 5.05 + 6.96 + 6.84 + 6.62 + 5.64) / 8 = 6.306,6.09,0,,0,0,Arithmetic Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the ratio of Source to interference ratio (SIR) to Source to artifact ratio (SAR) for Other for the DRDNN model?,Ratio = 1.97 / 6.81 = 0.29,0.274.,0,,0,0,Arithmetic Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+By what percentage does the Deep convolutional neural network (DCNN) surpasses the Multi-layer perceptron (MLP) in Source to interference ratio (SIR) for the Vocal signal?,Percentage difference = ((7.50 - 6.46) / 6.46) * 100 = 16.10%,16.11%,0,,0,0,Percentage Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the average number of questions per dataset across Train, Dev, and Test for the TREC-QA dataset?",Average number of questions per dataset: 431.7,INSUFFICIENT,0,,0,1,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the average question length across Train, Dev, and Test datasets for the TREC-QA dataset?",Average question length: 8.07,8.00,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total number of questions in the Train dataset for the two datasets?,Total number of questions in Train dataset: 2035,2035,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the average answer length across Train and Test for the TREC-QA dataset?,Average answer length: 24.41,24.90,0,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference in the number of questions between Dev and Test for the TREC-QA dataset?,Difference in number of questions: 3,3,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total number of ICD codes provided for Retinopathy and Neuropathy combined?,10,10,1,,0,0,Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the difference in the number of ICD codes between Nephrology and Vascular Disease?,3,3,1,,0,0,Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+How many ICD codes are related to high blood sugar levels?,8,7,0,,0,0,Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+"If a patient has both Retinopathy and Neuropathy, how many different ICD codes do they need to consider?",10,10,1,,0,0,Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+Which complication has the highest number of ICD codes listed?,Hypersmolar (HYPER),Vascular Disease (VAS),0,,0,0,Comparison,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the sum of Pearson correlation coefficients for LE method across all datasets?,Sum of Pearson correlation coefficients for LE method = 0.14 + 0.48 + 0.17 + 0.32 + 0.11 + 0.10 = 1.32,1.32,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the average Spearman correlation coefficient for DeepWalk method across all datasets?,Average Spearman correlation coefficient for DeepWalk method = (0.65 - 0.22 + 0.21 + 0.31 + 0.33 + 0.31 + 0.44 + 0.28 + 0.22) / 9 = 0.2811,0.24,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between Kendall correlation coefficients for DP-Spectral and DP-Walker methods in the Coauthor dataset?,Irrelevant question,0.20,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+Which dataset has the highest Pearson correlation coefficient for DP-Walker method?,Dataset with highest Pearson correlation coefficient for DP-Walker method = Synthetic (0.94),Coauthor,0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+What is the total of all correlation coefficients for DeepWalk method in the Synthetic dataset?,Total correlation coefficients for DeepWalk method = 0.47 - 0.22 - 0.18 = 0.07,0.07,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the average F-score across R8.25, R8.26, and R8.27 datasets for the LMBP algorithm?",Average F-score: 51.07,51.40,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the highest Jaccard value among all datasets for all the algorithms?,Highest Jaccard value: 42.02,INSUFFICIENT,0,,0,1,Comparison,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between the lowest and highest F-scores on R8.27 dataset?,Difference: 37.67,INSUFFICIENT,0,,0,1,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+Which dataset has the highest F-score?,Dataset with highest F-score: Ours,'R8.25',0,,0,0,Comparison,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total F-scores obtained by the BigCLAM algorithm on the Enron and R8.25 datasets?,39.26%,71.50,0,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the average precision across all methods?,Average precision: 0.6154,INSUFFICIENT.,0,,0,1,Arithmetic Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between the highest and lowest recall values?,Difference: 0.64,0.98,0,,0,0,Arithmetic Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total F1 score for the 'DP-Spectral' method?,Total F1 score: 4.39,INSUFFICIENT,0,,0,1,Arithmetic Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the average recall for the 'LE' method?,Average recall: 0.60,0.66,0,,0,0,Arithmetic Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the highest precision value among all methods?,Highest precision: 0.84,'0.84,1,,0,0,Arithmetic Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the ratio (%) of Original NMI for Political books compared to Friendship7?,Irrelevant question,84.63,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the NetMRF value for US Football as a percentage of the NetMRF value for Friendship6?,92.32 / 93.98 = 0.982,0.9996,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the Time (Seconds) for Cora as a ratio of the Time (Seconds) for UAI2010?,56.40 / 133.7 = 0.422,0.0341,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the ratio (%) of Original NMI for Northeastern compared to Political blogs?,52.3 / 73.31 = 0.713,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the NetMRF value for Karate club as a percentage of the NetMRF value for Political books?,100 / 56.88 = 1.758,175.66%,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the classification accuracy for FBE with 8192 bits encoding and 1/16 encoding time?,81.6%,81.6%,1,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the encoding time for BP with 1024 bits encoding and 1/128 classification accuracy?,0.41 ms,0.41 ms,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the classification accuracy for TP(Ours) with 4096 bits encoding and 1/32 encoding time?,81.2%,INSUFFICIENT,0,,0,1,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the encoding time for KBE with 16384 bits encoding and 1/8 classification accuracy?,5.96 ms,'5.96',1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the classification accuracy for CBE with 8192 bits encoding and 1/16 encoding time?,78.1%,'80.5%',0,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the Source to interference ratio (SIR) for the Deep convolutional neural network (DCNN) model from the Vocal signal?,7.50,2.05,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the Source to artifact ratio (SAR) for the Multi-layer perceptron (MLP) from the Vocal signal?,6.09,6.09,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the Source to distortion ratio (SDR) for the Deep recurrent neural network (DRNN) from the Vocal signal?,3.02,3.02,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the SIR from Bass signal for MLP model?,2.56,5.76,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the SAR from Drum for the DCNN model?,5.98,6.62,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the average number of questions used for Training in the TREC-QA dataset?,1162,873,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which dataset has the highest average question length?,Test set of TREC-QA dataset,TREC-QA Dev,0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+How many questions are there in the Train dataset for WikiQA?,873,873,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the average question length (AvgQL) in the WikiQA Dev dataset?,7.23,7.23,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+How many questions are there in the Test dataset for WikiQA?,243,243,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is Retinopathy?,Eye disease caused by damage to the blood vessels in the tissue at the back of the eye (retina),eye disease caused by damage to the blood vessels in the tissue at the back of the eye (retina),1,,0,0,Definition Extraction,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the ICD code range for Vascular Disease?,"25070, 25072, 24970, 24971, E0851, E08621-E08622, E0859","25070, 25072, 24970, 24971, E0851, E08621-E08622, E0859",1,,0,0,Specific Code Range,Compute,1,0,openai:gpt-4o-mini,baseline,1
+Which complication is characterized by kidney disease with hardening of the glomerulus?,Nephrology (NEP),Nephrology (NEP),1,,0,0,Identification Of Complication,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the abbreviation for Hyperosmolar?,HYPER,HYPER,1,,0,0,Abbreviation Extraction,Compute,1,0,openai:gpt-4o-mini,baseline,1
+Which complication involves nerve damage most often affecting the legs and feet?,Neuropathy (NEU),Neuropathy (NEU),1,,0,0,Identification Of Complication,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the Pearson correlation coefficient for DP-Spectral in the Twitter dataset?,0.50,0.50,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which method has the highest Spearman correlation in the Coauthor dataset?,DP-Spectral (0.51),'DP-Spectral (0.51)',1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the Kendall correlation coefficient for DP-Walker in the Mobile dataset?,0.20,0.20,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which dataset has the lowest Pearson correlation coefficient for LE?,Citation,LE (0.99),0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the Pearson correlation coefficient for DeepWalk in the Citation dataset?,0.51,0.51,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the Precision at 5 for Model VSE-ens in the Open-Images dataset?,0.0574,0.0574,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the Recall at 10 for Model WARP in the NUS-WIDE dataset?,0.0830,0.1982,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the MAP for Model WARP in the IAPR-TC12 dataset?,0.1796,0.1796,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the percentage Improvement for Precision at 5 in the IAPR-TC12 dataset?,0.50%,0.50 %,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the AUC for Model VSE-ens in the Open-Images dataset?,0.7168,0.7168,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the F-score for the dataset Enron using the algorithm BigCLAM?,18.90,20.36,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which algorithm has the highest Jaccard score for the dataset R8.25?,Ours,37.62,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the percentage Jaccard value for LDA algorithm on the R8.27 dataset?,30.28,INSUFFICIENT,0,,0,1,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which dataset has the highest F-score for the SCI algorithm?,R8.27,54.19,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the F-score for the dataset Enron using the algorithm CESNA?,30.15,50.23,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the Precision value for the method Deepwalk in the Twitter dataset?,0.65,'0.65',1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which method has the highest Recall value?,DP-Spectral on Citation dataset,'DP-Spectral',0,,0,0,Max Value Determination,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the F1 score for the LE method in the Mobile dataset?,0.48,'0.57',0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which dataset has the lowest Precision value?,Synthetic,"'Coauthor','Deepwalk','0.55'",0,,0,0,Min Value Determination,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the average Precision value across all datasets for the DP-Walker method?,0.60,0.56,0,,0,0,Average Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the topic of the sentence 'An OSHA fine of only $2000 most likely means the company did all they could to reasonably protect the worker'?,Politics,INSUFFICIENT,0,,0,1,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the name of the film that describes 'A film about a high school teachers unusual experiment to demonstrate to his students what life is like under a dictatorship'?,Die Welle,Die Welle,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+"According to the sentence 'In the UK people are being arrested for insulting people over Twitter, rioters are thrown in jail for 10 years for stealing shoes', what action results in people being arrested in the UK?",Insulting people over Twitter,Insulting people over Twitter,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What industry decline is discussed in the sentence 'As to my own thoughts on the current state of the industry major American films have been steadily declining in quality and content since 1975'?,American films,Movies,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+"Which film is mentioned in the sentence 'Elf- yes, there are moments where he seems to be the stereotypical Will that it (for the most part) is just about the voice, so the performance is all in that'?",,Elf,1,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+What is the NetMRF NMI (%) for the 'Friendship6' dataset?,93.98,93.98%,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the ratio (%) for the 'Political books' dataset in the NMI column?,84.63,84.63,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the Time (Seconds) for the 'Cora' dataset in the Original column?,1666,1666,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the NMI (%) for the 'US Football' dataset in the NetMRF?,92.32,92.32%,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the NMI ratio (%) for the 'Northeastern' dataset?,86.50,86.50%,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the classification accuracy for raw deep feature (4096-d)?,82.6%,82.6%,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the encoding time for CBE with 1024 bits and a relative storage of 1/128?,0.85,0.85,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which method has the highest classification accuracy with 8192 bits and a relative storage of 1/16?,TP(Ours) with 82.0%,'FBE',0,,0,0,Comparison,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the encoding time for FBE with 16384 bits and a relative storage of 1/8?,5.54,'5.96',0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+How does the classification accuracy of KBE change as the relative storage increases from 1/16 to 1/8?,Increases from 80.5% to 81.0%,81.0%,1,,0,0,Trend Analysis,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the RMSE value when using SYNPOS + EMBEDDING?,0.6484,'0.6484,1,,0,0,Arithmetic Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the difference in 'r' values between SYNPOS + EMBEDDING and SYNPOS?,0.0957,0.0957,1,,0,0,Arithmetic Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the total of 'r' values for SYNPOS + CONCRETENESS, SYNPOS + IMAGEABILITY, and SYNPOS + SENTIMENT?",1.0856,1.0856,1,,0,0,Arithmetic Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the average RMSE value for SYNPOS, SYNPOS + CONCRETENESS, and SYNPOS + AMBIGUITY?",0.3589,0.6728,0,,0,0,Arithmetic Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"If we remove SYNPOS + SYNSET from the analysis, what would be the new total of 'r' values?",2.97,2.8534,0,,0,0,Arithmetic Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What does 'D^(t,s)' represent?",Documents at time epoch t with time scale S,'Documents at time epoch t with time scale S',1,,0,0,Definition,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the symbol for the number of latent topics to be inferred?,K,'K',1,,0,0,Symbol Identification,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What does 'N' represent in the table?,Total number of words in the corpus,Total number of words in the corpus,1,,0,0,Definition,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the symbol for the Dirichlet prior for the topics at time epoch t?,α^t,'α^t,1,,0,0,Symbol Identification,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the symbol for the length of the smallest time epoch?,l_min,'l_min,1,,0,0,Symbol Identification,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the accuracy for the model FastText in Food101 dataset?,88.0 ± 0.1,88.0 ± 0.1,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the accuracy for the model Additive in MM-IMDB dataset?,61.0 ± 0.0,61.0 ± 0.0,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which model has the highest accuracy in FlickrTag-1 dataset?,Bilinear-gated,Bilinear-gated,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the accuracy for the model Continuous with Gated in Food101 dataset?,90.1 ± 0.1,90.1 ± 0.1,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which model has the lowest accuracy overall?,Continuous,'Continuous',1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which feature set has the highest 'r' value?,SYNPOS + EMBEDDING,'SYNPOS + EMBEDDING',1,,0,0,Max Value Selection,Compute,1,0,openai:gpt-4o-mini,baseline,1
+Which feature set has the lowest RMSE value?,SYNPOS + EMBEDDING,"'SYNPOS + EMBEDDING','0.6484'",1,,0,0,Min Value Selection,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the 'r' value for SYNPOS + CONCRETENESS?,0.3623,0.3623,1,,0,0,Specific Value Retrieval,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the RMSE value for SYNPOS + IMAGEABILITY?,0.6734,'0.6734,1,,0,0,Specific Value Retrieval,Compute,1,0,openai:gpt-4o-mini,baseline,1
+"Which feature set has a higher 'r' value, SYNPOS + SENTIMENT or SYNPOS + Co-OCCURRENCE?",SYNPOS + SENTIMENT,'SYNPOS + SENTIMENT',1,,0,0,Comparison Of Values,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the total number of selected users for the FS group?,54 users,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the probability of not selecting a user from any user group?,0.3,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+How many users are selected from the D4D group?,269 users,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total number of users in the CMCC and D4D groups combined?,6693 users,2633 (users),0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the highest threshold number for frequent locations?,0.8,0.8,1,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the average Method SumMe benchmark across all METHODS using the upper bounds?,41.17%,41.0%,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between the SASUM_sup and SASUM_length values in the TVSum benchmark column?,3.6%,3.6%,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the percentage increase from dppLSTM to SUM-GAN_sup in the Method SumMe benchmark column?,8.0%,3.1%,0,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the average percentage difference between the SASUM and SASUM_length values in the TVSum benchmark column?,0.7%,0.7%,1,,0,0,Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the total percentage range in the Method SumMe benchmark column?,5.3%,41.7% - 39.7%,0,,0,0,Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the computation for motif M2 based on the table?,C = (B*U) o U^T+(U*B) o U^T + (U*U) o B,C = (B.U) o U^T+(U.B) o U^T + (U.U) o B,0,,0,0,Arithmetic Involving Matrix Operations,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the computation for motif M5 based on the table?,C=(U*U) o U+(U*U^T) o U+(U^T*U) o U,C=(U.U) o U+(U.U^T) o U+(U^T.U) o U =,0,,0,0,Arithmetic Involving Matrix Operations,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the computation for motif M6 based on the table?,C = (U*B) o U + (B*U^T) o U^T + (U^T*U) o B,C = (U.B) o U+(B.U^T) o U^T + (U^T.U) o B,0,,0,0,Arithmetic Involving Matrix Operations,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the computation for motif M3 based on the table?,C = (B*B) o U + (B*U) o B + (U*B) o B,C = (B.B) o U+(B.U) o B+(U.B) o B,0,,0,0,Arithmetic Involving Matrix Operations,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the computation for motif M7 based on the table?,C = (U^T*B) o U^T + (B*U) o U + (U*U^T) o B,C = (U^T.B) . (B.T ) o U + (U.U^T) O B,0,,0,0,Arithmetic Involving Matrix Operations,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the average AUC across all methods?,0.8589,INSUFFICIENT.,0,,0,1,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference in AUC between 'LRCN w/ 3 conv. layers' and 'RNN w/ 5 semantic RoIs'?,0.007,0.007,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total AUC for all 'RNN' methods?,3.401,2.578,0,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the highest Balanced accuracy among all methods?,0.821,0.821,1,,0,0,Identification,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the total number of conv. layers for all 'LRCN' methods?,6,6,1,,0,0,Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the average value of Test across all languages?,Average Test value: 90.18,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between the highest and lowest values of Baseline?,Difference between highest and lowest Baseline values: 2.16,8.59,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total value of Tun for Italian and Urdu?,Total Tun value for Italian and Urdu: 181.48,181.48,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the percentage increase of Farsi's Test value compared to Baseline?,Percentage increase of Farsi's Test value compared to Baseline: 5.14%,5.38%,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"If Urdu's Test value is 2.5 more than Italian's Test value, what is Urdu's Test value?",Urdu's Test value: 92.8,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the average percentage of YouTube views for all methods?,60.14%,INSUFFICIENT.,0,,0,1,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between the SASUM_sup and SASUM_length YouTube views percentages?,1.8%,1.8%,1,,0,0,Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the total percentage of YouTube views for dppLSTM and SUM-GAN_sup?,62.5%,INSUFFICIENT,0,,0,1,Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the percentage range for SASUM YouTube views?,0.2%,57.6±0.1%,0,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"If the total YouTube views for all methods is 100%, what percentage does Gygli et al. contribute?",0%,INSUFFICIENT,0,,0,1,Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+"What is the average value of BET for the datasets TopK users, Epinions, and Ciao?","Average value of BET for TopK users, Epinions, and Ciao is 0.9432",0.9710,0,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between the values of IND for datasets Epinions and Ciao?,Irrelevant question,-0.0258,0,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the total value of M7 for the datasets TopK users, Epinions, and Ciao?","Total value of M7 for TopK users, Epinions, and Ciao is 5.7268",'0.9920' + '0.9780' + '0.9514' = '2.9214',0,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the highest value among the metrics for the dataset Epinions?,Highest value among the metrics for Epinions is 0.9957,0.9957,1,,0,0,Comparison,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the average value of WPR for the datasets TopK users, Epinions, and Ciao?","Average value of WPR for TopK users, Epinions, and Ciao is 0.9091",0.9039,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the sum of M3, M5, and M7 for the Epinions dataset?",490.22,490.22,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between M2 and M6 for the Ciao dataset?,-8.86,0.00,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the average of M1, M4, and M7 for the DBLP dataset?",160.90,160.56,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the product of M1, M3, and M5 for the DBLP dataset?",977779.05,1066074.67,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the difference between the sum of M2, M4, and M6 and the sum of M1, M3, and M5 for the DBLP dataset?",156.35,327.35,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the average MAP score among all entries in the table?,Average MAP score: 0.7710,0.7695,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between the highest and lowest MRR scores in the table?,Difference: 0.0973,0.0973,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total sum of MAP and MRR scores for the first 3 entries in the table?,Total sum: 4.6284,4.6284,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the average MAP score for entries that include 'Wang' in the author names?,Average MAP score for 'Wang' entries: 0.7419,0.9919,0,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total sum of MRR scores for entries with '2016' in the publication year?,Total sum of MRR scores for '2016' entries: 3.3936,2.5166,0,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the average F1 score of the entries with authors (Wan et al. 2006), (Socher et al. 2011), and (Yin and Schütze 2015)?",83.1,82.7,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the difference in System accuracy between (Ji and Eisenstein 2013) and (He, Gimpel, and Lin 2015) without pretraining?",2.6,2.6%,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total F1 score for entries with and without pretraining?,165.8,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the percentage increase in accuracy from (Hu et al. 2014) to (Yin and Schütze 2015) with pretraining?,11.73%,11.74%,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference in F1 score between (Yin and Schütze 2015) with POS and Para. embeddings and CA-RNNS (ATT)?,0.4,0.4,1,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the value of ε for the differential privacy level?,"ln(2), ln(4), ln(6), ln(8)","ln(2), ln(4), ln(6), ln(8)",1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the threshold values for frequent locations denoted by δ?,"0.5, 0.6, 0.7, 0.8","0.5, 0.6, 0.7, 0.8",1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What are the number of users for the experiment?,"1083 (FS), 1315 (CMCC), 5378 (D4D)","1083 (FS), 1315 (CMCC), 5378 (D4D)",1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the number of selected users denoted by α?,5%*N,5%.N,1,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+How many user groups are there denoted by k?,6,6,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the Method used in the TVSum benchmark to achieve an F-Score of 54.7%?,dppLSTM,dppLSTM,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the SumMe benchmark score for the SASUM_sup method?,45.3±0.1%,'45.3±0.1%,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which method achieved the highest score in the TVSum benchmark?,SASUM_sup,'SASUM_sup',1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the SumMe benchmark score for the SUM-GAN_sup method?,41.7%,41.7%,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the F-Score for SumMe benchmark on Zhang et al.'s method?,40.9%,INSUFFICIENT,0,,0,1,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the motif for which the adjacency matrix computation involves C = (U.U) o U^T?,M1,M1,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the adjacency matrix for motif M5?,C+C^T,C=(U.U) o U+(U.U^T) o U+(U^T.U) o U =,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which motif has the matrix computation C = (B.B) o B for its adjacency matrix?,M4,M4,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the adjacency matrix computation for motif M6?,C,C = (U.B) o U+(B.U^T) o U^T + (U^T.U) o B,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+"For motif M7, what is the computation for the adjacency matrix?",C,C = (U^T.B) . (B.T ) o U + (U.U^T) O B,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which method achieved the highest AUC?,LRCN w/ 3 conv. layers,'LRCN w/ 3 conv. layers',1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which method had the highest balanced accuracy?,RNN w/ 8 semantic RoIs,'RNN w/ 8 semantic RoIs',1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the AUC value for RNN w/5 semantic RoIs?,0.872,0.872,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which method has the lowest AUC?,RNN w/ 3 X 3 grid RoIs,'RNN w/ 3 X 3 grid RoIs',1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the balanced accuracy for LRCN w/2 conv. layers?,0.780,0.780,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the test score for Italian language?,90.35,'90.35,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which language has the highest baseline score?,Urdu,Italian,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the difference in Tun score between Farsi and Urdu?,0.20,0.20,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+Which language has the lowest overall score?,Farsi,'Farsi,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the average score across all languages in the table?,89.08,INSUFFICIENT,0,,0,1,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the accuracy percentage for the method 'Zhang et al.'?,61.8%,61.8%,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the accuracy percentage for the method 'dppLSTM'?,-,INSUFFICIENT.,1,,0,1,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+What is two multiplied by the accuracy percentage for the method 'Zhang et al.'?,123.6%,123.6%,1,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+What is the accuracy percentage for the method 'SUM-GAN_sup'?,62.5%,62.5%,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+"What is the average accuracy percentage for the methods 'SASUM', 'SASUM_length', and 'SASUM_sup' using the upper bound values?",59.0%,58.5%,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the NDCG values for the Top 10 users value for the Ciao dataset using the IND method?,0.9218,0.9218,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the IND NDCG value for the Epinions dataset for Top 500 users?,0.9343,0.9343,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the BET NDCG value for the Top 500 users value on the DBLP dataset?,0.9559,0.9559,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the NDCG value using the WPR method for the Ciao dataset for Top 500 users?,0.8932,0.8932,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the NDCG value for the IND method for Top 50 users on the Ciao dataset?,0.8651,INSUFFICIENT,0,,0,1,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the Z-score for M3 in the Epinions dataset?,162.74,162.74,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which dataset has the highest Z-score for M6?,DBLP,DBLP,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the Z-score for M1 in the Ciao dataset?,7.83,7.83,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+In which dataset is the Z-score for M4 the lowest?,Ciao,Epinions,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the Z-score for M7 in the DBLP dataset?,348.71,348.71,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the MAP value for (Chen et al. 2017)?,0.7814,0.7814,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which system has the highest MRR value?,CA-RNNS (MAX),'CA-RNNS (MAX)',1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the MAP value for (Wang and Ittycheriah 2015)?,0.7460,0.7460,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which system has the lowest MAP value?,(Wang and Nyberg 2015),'(Wang and Nyberg 2015)',1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+"What is the MRR value for (Wang, Mi, and Ittycheriah 2016)?",0.8447,'0.8447,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the F1 score for (Ji and Eisenstein 2013)?,86.0,86.0,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+"What is the System accuracy for (He, Gimpel, and Lin 2015) without POS embeddings?",77.8,INSUFFICIENT,0,,0,1,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which system has the highest accuracy?,(Ji and Eisenstein 2013) with 80.4 accuracy,'(Ji and Eisenstein 2013)',1,,0,0,Comparison,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the F1 score for (Hu et al. 2014)?,80.9,80.9,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the System accuracy for (Yin and Schtze 2015) without pretraining?,72.5,INSUFFICIENT.,0,,0,1,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the total number of Dev in all categories?,Total Dev = 50 + 500 + 59 + 155 + 286 = 1050,1050,0,,0,0,Arithmetic Involving Multiple Cells,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the average number of Train in all categories?,Average Train = (267 + 2669 + 235 + 648 + 1586) / 5 = 1081,821.0,0,,0,0,Arithmetic Involving Multiple Cells,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What percentage of PerfectMatch in 2016-Test category compared to total Candidates?,Percentage = (81 / 700) * 100 = 11.57%,33.71428571%,0,,0,0,Arithmetic Involving Multiple Cells,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between Relevant and Irrelevant in 2017-Test category?,Difference = 717 - 139 = 578,578,0,,0,0,Arithmetic Involving Multiple Cells,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"If the number of Candidates in 2017-Test category doubled, what would be the new total?",New total = 2 * 880 = 1760,1760,0,,0,0,Arithmetic Involving Multiple Cells,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the average similarity score for CBOW, SG, GloVe, and Ours models in the WordSim353 dataset?",Average similarity score is 0.6816,0.6861,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between the similarity score of CBOW and SG models in the WordSim353 dataset?,Difference is 0.0092,0.0092,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the ratio of similarity scores between GloVe and Ours models in the WordSim353 dataset?,Ratio is 0.836,0.6077 / 0.7269,0,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"If the similarity score for Ours model in the WordSim353 dataset is 0.7269, what is the percentage increase from the similarity score of SG model?",Percentage increase is 3.8%,3.80%,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+Which model has the highest similarity score in the WordSim353 dataset?,Ours model,Ours,0,,0,0,Identification,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+"What is the average value of the scores for CBOW, SG, and GloVe models?",Average score = (0.7590 + 0.7639 + 0.6762 + 0.6846 + 0.7563 + 0.7627 + 0.6477 + 0.6599 + 0.6120 + 0.6484 + 0.6717 + 0.6807) / 12 = 0.6934,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between the scores of 3CosAdd and 3CosMul for the Ours model?,Irrelevant question,0.0343,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total score for CBOW and SG models combined?,Total score = 0.7590 + 0.7639 + 0.6762 + 0.6846 + 0.7563 + 0.7627 + 0.6477 + 0.6599 = 5.7103,2.8392,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the average score for all models in the table?,Average score = (0.7590 + 0.7639 + 0.6762 + 0.6846 + 0.7563 + 0.7627 + 0.6477 + 0.6599 + 0.6120 + 0.6484 + 0.6717 + 0.6807 + 0.787 + 0.786 + 0.7512 + 0.7527) / 16 = 0.7125,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between the highest and lowest scores in the table?,Difference = 0.7870 - 0.6120 = 0.175,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between the Accuracy of word-LSTM and all-LSTM models?,0.7,0.7%,1,,0,0,Arithmetic,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the sum of the AUC values for BoW and all-LSTM models?,112.5,110.5,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the average True F-score across all models?,52.6,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between the Accuracy and AUC of the BoW model?,-1.7,2.2,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the ratio of AUC to Accuracy for the all-LSTM model?,0.979,0.9788,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between the F1 score for CBOW and GloVe models?,0.0069,0.0003,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the sum of the Chunking scores for SG and Ours-MS models?,1.8357,1.8357,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the average of the Unknown_3 scores for all models?,Irrelevant question,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the product of the Precision and Recall scores for baseline model?,Irrelevant question,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between the Precision scores for Ours and Ours-MS models?,Irrelevant question,0.0032,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference in AUC between 'no highway' and 'discourse only' models?,11.3,11.3,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"What is the sum of Model Accuracy for 'no lstm', 'no attention', and 'frames only' models?",178.7,178.7,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the average True F-score across all models?,49.15,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the product of AUC and True F-score for 'all-LSTM' model?,4001.5,4001.5,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"If the Model Accuracy of 'no attention' model is increased by 5.0, what would be the new value?",71.6,71.6,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between the Models Validation Accuracy and Test Accuracy for the DecompAtt model?,3.1,3.1,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the average accuracy of all models for Models Validation Accuracy?,71.48,INSUFFICIENT,0,,0,1,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the total accuracy for the models with Test Accuracy greater than 75%?,156.9,77.3,0,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the percentage increase in accuracy from Ngram to DGEM for Models Validation Accuracy?,22.5%,22.46%,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference in accuracy between Majority class and DGEM w/o edges for Test Accuracy?,10.5,10.5,1,,0,0,Arithmetic,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the average percentage for Human in the Model category?,Irrelevant question,INSUFFICIENT,0,,0,1,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference in percentage between Government and Sociology in the Human category?,1.8%,5.3%,0,,0,0,Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the total percentage for Morality in the Model category?,11%,68.2,0,,0,0,Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the percentage for Politics in the Human category?,56.3%,62.5%,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the percentage for Culture in the Model category?,63.6%,54.5%,0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+How many candidates took the 2017-Test?,880,880,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the total number of relevant and irrelevant candidates in the Dev 2016?,441,441,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+Which class had the highest number of candidates in the Train category?,Irrelevant question,Candidates,0,,0,0,Max Value,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What percentage of PerfectMatch candidates took the Dev 2016 test?,Irrelevant question,INSUFFICIENT,0,,0,1,Percentage Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+How many more irrelevant candidates took the 2017-Test compared to the 2016-Test?,250,250,1,,0,0,Calculation,Compute,1,0,openai:gpt-4o-mini,baseline,1
+"What is the average similarity score for CBOW, SG, GloVe, and Ours models in the WordSim353 dataset?",Average similarity score is 0.6861,0.6861,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the difference between the similarity score of CBOW and SG models in the WordSim353 dataset?,Difference is 0.0092,0.0092,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the ratio of similarity scores between GloVe and Ours models in the WordSim353 dataset?,Ratio is 0.8360,0.6077 / 0.7269,0,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+"If the similarity score for Ours model in the WordSim353 dataset is 0.7269, what is the percentage increase from the similarity score of SG model?",Percentage increase is 3.80%,3.80%,1,,0,0,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+Which model has the highest similarity score in the WordSim353 dataset?,Ours model,Ours,0,,0,0,Identification,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+What is the score for Model 'CBOW' in the 'Google' column?,Irrelevant question,0.7590,0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+Which model has the highest score in the 'Unknown_3' column?,Irrelevant question,INSUFFICIENT,0,,0,1,Comparison,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the score for Model 'GloVe' in the 'MSR' column?,Irrelevant question,0.6717,0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+Which model has the lowest score in the '3CosMul' column?,GloVe,'0.6599',0,,0,0,Comparison,Compute,1,0,openai:gpt-4o-mini,baseline,1
+What is the average score across all models in the '3CosAdd' column?,0.7076,INSUFFICIENT,0,,0,1,Calculation,Compute,0,0,openai:gpt-4o-mini,baseline,1
+Which model has the highest accuracy?,all-LSTM,'all-LSTM',1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which model has the highest AUC?,all-LSTM,'all-LSTM',1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which model has the highest True F-score?,word-LSTM,'all-LSTM',0,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the accuracy of the BoW model?,51.6,51.6,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the AUC of the word-LSTM model?,55.5,'55.5,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the F1 score for the Chunking task for the CBOW model?,0.9071,0.9071,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the Precision score for the Unknown_3 task for the GloVe model?,Irrelevant question,INSUFFICIENT,0,,0,1,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+Which model has the highest Recall score for the Model POS-tagging task?,Irrelevant question,0.3287,0,,0,0,Max Value Selection,Compute,0,0,openai:gpt-4o-mini,baseline,1
+What is the Precision score for the Unknown_3 task for the SG model?,Irrelevant question,INSUFFICIENT,0,,0,1,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+What is the F1 score for the Model POS-tagging task for the baseline model?,Irrelevant question,0.8826,0,,0,0,Cell Selection,Lookup,0,0,openai:gpt-4o-mini,baseline,1
+Which model has the highest AUC?,all-LSTM,'all-LSTM',1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the True F-score for the 'no attention' model?,51.3,'51.3',1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which model has an accuracy of 54.6?,discourse only,INSUFFICIENT.,0,,0,1,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the AUC for the 'frames only' model?,66.4,66.4,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which model achieved an accuracy of 68.8?,no lstm,'no lstm,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+What is the validation accuracy of the model 'ESIM'?,70.5,70.5,1,,0,0,Cell Selection,Lookup,1,0,openai:gpt-4o-mini,baseline,1
+Which model has the highest test accuracy?,DGEM,'DGEM',1,,0,0,Comparison,Compute,1,0,openai:gpt-4o-mini,baseline,1
